@@ -54,5 +54,8 @@ We would like the user to be able to search according to specific search paramet
 ![wireframe2](./assets/images/search.png)
 ![wireframe3](./assets/images/info.png)
 
+## ERD
+![ERD](./assets/images/ERD.jpg)
+
 
 [Link to Google Slides](https://docs.google.com/presentation/d/1uxT85MbGpy_QfKzctI9AatGsZRO34L84ZMVZXQwaQFs/edit?usp=sharing)
