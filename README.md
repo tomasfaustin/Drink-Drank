@@ -1,8 +1,8 @@
-#DRINK/DRANK L.A.®
+# DRINK/DRANK L.A.®
 
 ![wireframe](./assets/images/drink.jpeg)
 
-##INTRODUCTION
+## INTRODUCTION
 
 Do you know what time it is? It's time for a drink!
 
@@ -14,7 +14,7 @@ You and your friends can use **DRINK/DRANK L.A.®** to keep track of your favori
 
 Just remember to drink responsibly. Cheers!
 
-##TECH USED
+## TECH USED
 
 * MEN Stack
 * AJAX
@@ -23,24 +23,24 @@ Just remember to drink responsibly. Cheers!
 * 3rd Party API
 
 
-##APPROACH
+## APPROACH
 
 We created two models--one for Users and one for Bars--that contain all of the information necessary to liaise between users and bars they will frequent. These models manage our users' data and databases.
 
 
-##TRELLO PAGE
+## TRELLO PAGE
 
 [Click here for Trello boards work flow](https://trello.com/b/4enMQKYM/project-3)
 
-##UNSOLVED PROBLEMS
+## UNSOLVED PROBLEMS
 
 We would like the user to be able to search according to specific search parameters(i.e., price, zip code, etc).
 
-##INSTALLATION INSTRUCTIONS
+## INSTALLATION INSTRUCTIONS
 
 
 
-##MVP
+## MVP
 
 * Have a working Facebook OAuth for users to log on and log off
 * Allow users to be able to create, edit, update and delete their lists of bars (full CRUD)
@@ -49,7 +49,7 @@ We would like the user to be able to search according to specific search paramet
 
 
 
-##WIREFRAMES
+## WIREFRAMES
 ![wireframe1](./assets/images/splash.png)
 ![wireframe2](./assets/images/search.png)
 ![wireframe3](./assets/images/info.png)
