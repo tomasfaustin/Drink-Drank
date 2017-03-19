@@ -6,6 +6,7 @@ var express 				= require('express'),
 
 var {home, getSignup, postSignup, getLogin, postLogin, getFacebook, getFacebookCallback} = require('../controllers/users');
 var {about} = require('../controllers/static')
+var {index} = require('../controllers/index')
 
 function authenticatedUser(req, res, next) {
 	if (req.isAuthenticated()) return;
@@ -15,6 +16,9 @@ function authenticatedUser(req, res, next) {
 
 router.route('/')
 	.get(home);
+
+router.route('/index')
+	.get(index);
 
 router.route('/about')
 	.get(about);
