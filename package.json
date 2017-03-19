@@ -1,7 +1,7 @@
 {
   "name": "Drink-Drank",
   "version": "1.0.0",
-  "description": "![wireframe](./assets/images/drink.jpeg)",
+  "description": "Where to find drinks",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -24,8 +24,10 @@
     "cookie-parser": "^1.4.3",
     "dotenv": "^4.0.0",
     "ejs": "^2.5.6",
-    "express": "^4.15.2",
+    "express": "~4.0.0",
+    "express-ejs-layouts": "^2.2.0",
     "express-session": "^1.15.1",
+    "method-override": "^2.3.7",
     "mongoose": "^4.9.0",
     "morgan": "^1.8.1",
     "passport": "^0.3.2",
