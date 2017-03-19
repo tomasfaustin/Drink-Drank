@@ -4,7 +4,6 @@
   "description": "![wireframe](./assets/images/drink.jpeg)",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
@@ -17,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/jakehawk/Drink-Drank/issues"
   },
-  "homepage": "https://github.com/jakehawk/Drink-Drank#readme"
+  "homepage": "https://github.com/jakehawk/Drink-Drank#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.0",
+    "morgan": "^1.8.1",
+    "path": "^0.12.7"
+  }
 }
