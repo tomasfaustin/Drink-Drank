@@ -1,6 +1,18 @@
 h1{
-  color: blue;
+  color: white !important;
+  margin: 20px !important;
+
 }
-.msgBox{
-  background-color: blue;
+#msgBoxText{
+  font-size: 100px !important;
+  color: white !important;
+}
+button{
+  margin: 20px !important;
+}
+.msgbox{
+  margin: 0 auto;
+  width: 80%;
+  border-radius: 10px;
+  background: url('http://static.flavors.me/dynamic_images/background/0447e1158adf46048ae1c08b9d16103e');
 }
