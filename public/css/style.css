@@ -1,8 +1,19 @@
 h1{
   color: white !important;
   margin: 20px !important;
-
 }
+
+#signup {
+  width: 50%;
+  margin: 0 auto !important;
+}
+
+.fb-login {
+  width: 50%;
+  /*padding-left: 100px;*/
+  margin: 0 auto !important;
+}
+
 #msgBoxText{
   font-size: 100px !important;
   color: white !important;
@@ -15,4 +26,9 @@ button{
   width: 80%;
   border-radius: 10px;
   background: url('http://static.flavors.me/dynamic_images/background/0447e1158adf46048ae1c08b9d16103e');
+}
+
+form{
+  width: 50%;
+  margin: 0 auto;
 }
