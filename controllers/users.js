@@ -22,7 +22,7 @@ function getLogin(req, res) {
 }
 
 function postLogin(req, res) {
-	var loginProperty = passport.authenticate('local-logn', {
+	var loginProperty = passport.authenticate('local-login', {
 		successRedirect: '/',
 		failureRedirect: '/login',
 		failureFlash: true
@@ -44,5 +44,7 @@ function home(req, res) {
 module.exports = {
 	home : home,
 	getSignup: getSignup,
-	postSignup: postSignup
+	postSignup: postSignup,
+	getLogin: getLogin,
+	postLogin: postLogin
 }
