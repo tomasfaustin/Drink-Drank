@@ -1,0 +1,21 @@
+{
+  "name": "Drink-Drank",
+  "version": "1.0.0",
+  "description": "![wireframe](./assets/images/drink.jpeg)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakehawk/Drink-Drank.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakehawk/Drink-Drank/issues"
+  },
+  "homepage": "https://github.com/jakehawk/Drink-Drank#readme"
+}
