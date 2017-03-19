@@ -32,10 +32,29 @@ function postLogin(req, res) {
 }
 
 
+ // =====================================
+ // FACEBOOK ACTIONS=====================
+ // =====================================
+ // route for facebook authentication and login
+ function getFacebook(request, response) {
+   var signupStrategy = passport.authenticate('facebook', {
+     scope : 'email'
+   });
 
+   return signupStrategy(request, response);
+ }
 
+ // handle the callback after facebook has authenticated the user
+ function getFacebookCallback(request, response) {
+   var loginProperty = passport.authenticate('facebook', {
+     successRedirect : '/',
+     failureRedirect : '/login'
+   });
 
+   return loginProperty(request, response);
+ }
 
+//=================FACEBOOK==========================
 
 function home(req, res) {
 	res.render('home.ejs');
@@ -46,5 +65,7 @@ module.exports = {
 	getSignup: getSignup,
 	postSignup: postSignup,
 	getLogin: getLogin,
-	postLogin: postLogin
+	postLogin: postLogin,
+	getFacebook: getFacebook,
+	getFacebookCallback: getFacebookCallback
 }
