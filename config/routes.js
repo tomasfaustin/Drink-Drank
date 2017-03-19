@@ -5,7 +5,7 @@ var express 				= require('express'),
 		passport				= require('passport');
 
 var {home, getSignup, postSignup, getLogin, postLogin} = require('../controllers/users');
-
+var {about} = require('../controllers/static')
 
 function authenticatedUser(req, res, next) {
 	if (req.isAuthenticated()) return;
@@ -15,6 +15,9 @@ function authenticatedUser(req, res, next) {
 
 router.route('/')
 	.get(home);
+
+router.route('/about')
+	.get(about);
 
 router.route('/signup')
 	.get(getSignup)
