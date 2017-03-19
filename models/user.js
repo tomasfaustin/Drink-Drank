@@ -1,7 +1,8 @@
 var mongoose = require('mongoose'),
-		bcrypt	 = require('bcrypt-nodejs');
+		bcrypt	 = require('bcrypt-nodejs'),
+		Bar 		 = require('./bar');
 
-var User = mongoose.Schema({
+var userSchema = mongoose.Schema({
 	local : {
 		email    : String,
 		password : String
@@ -9,6 +10,7 @@ var User = mongoose.Schema({
 		bars: [Bar.schema]
 });
 
+// adds passport encryption
 User.methods.encrypt = function(password) {
 	return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
 };
@@ -17,4 +19,6 @@ User.methods.validPassword = function(password) {
 	return bcyrpt.compareSync(password, this.local.password);
 };
 
-module.exports = mongoose.model('User', User);
+var User = mongoose.model('User', userSchema)
+
+module.exports = User;
