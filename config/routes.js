@@ -5,7 +5,7 @@ var express 				= require('express'),
 		passport				= require('passport');
 
 var {home, getSignup, postSignup, getLogin, postLogin, getFacebook, getFacebookCallback} = require('../controllers/users');
-var {about} = require('../controllers/static')
+var {about} = require('../controllers/staticpages')
 var {index} = require('../controllers/index')
 
 function authenticatedUser(req, res, next) {
