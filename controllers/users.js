@@ -1,3 +1,5 @@
+var passport = require('passport');
+
 function home(req, res) {
 	res.render('home.ejs');
 }
