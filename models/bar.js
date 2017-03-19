@@ -1,6 +1,6 @@
 var mongoose = require('mongoose')
 
-var barsSchema = new mongoose.Schema({
+var barSchema = new mongoose.Schema({
   name: String,
 })
 

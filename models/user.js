@@ -11,11 +11,11 @@ var userSchema = mongoose.Schema({
 });
 
 // adds passport encryption
-User.methods.encrypt = function(password) {
+userSchema.methods.encrypt = function(password) {
 	return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
 };
 
-User.methods.validPassword = function(password) {
+userSchema.methods.validPassword = function(password) {
 	return bcyrpt.compareSync(password, this.local.password);
 };
 
