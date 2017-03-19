@@ -19,7 +19,7 @@ app.use(bodyParser());
 app.set('view engine', 'ejs');
 app.use(ejsLayouts);
 app.set('views', './views');
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({ secret: 'drink drank' }));
 app.use(passport.initialize());
