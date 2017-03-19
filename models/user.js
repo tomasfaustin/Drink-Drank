@@ -7,7 +7,13 @@ var userSchema = mongoose.Schema({
 		email    : String,
 		password : String
 	},
-		bars: [Bar.schema]
+	facebook : {
+		id       : String,
+		token    : String,
+		email    : String,
+		name     : String,
+	},
+	bars       : [Bar.schema]
 });
 
 // adds passport encryption

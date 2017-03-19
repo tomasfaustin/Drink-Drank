@@ -10,6 +10,8 @@ var express 			= require('express'),
 		bodyParser  	= require('body-parser'),
 		session		  	= require('express-session');
 
+require('dotenv').config();
+
 mongoose.connect('mongodb://localhost/test-db-p3');
 
 app.use(morgan('dev'));
