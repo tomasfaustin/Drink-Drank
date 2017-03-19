@@ -4,7 +4,7 @@ var express 				= require('express'),
 		// methodOverride	= require('method-override'),
 		passport				= require('passport');
 
-var {home, signup} = require('../controllers/users');
+var {home, getSignup, postSignup} = require('../controllers/users');
 
 
 function authenticatedUser(req, res, next) {
@@ -17,6 +17,7 @@ router.route('/')
 	.get(home);
 
 router.route('/signup')
-	.get(signup);
+	.get(getSignup)
+	.post(postSignup)
 
 module.exports = router
