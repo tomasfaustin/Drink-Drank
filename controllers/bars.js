@@ -24,7 +24,7 @@ function createBar(req, res) {
 		console.log(user);
 		user.bars.push({
 			name: req.body.name,
-			description: req.body.description
+			image_url: req.body.image_url
 		})
 
 		user.save(function(err, user) {
