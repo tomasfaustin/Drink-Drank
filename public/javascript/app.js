@@ -3,30 +3,38 @@ var $nonVisitedBar
 var $form
 var $searchTerm
 var yelpInfo
-var Yelp = require('yelp-api-v3')
 
-var yelp = new Yelp ({
-  app_id: process.env.YELP_ID,
-  app_secret: process.env.YELP_SECRET
-})
-
+//
+// var yelp = new Yelp ({
+//   app_id: process.env.YELP_ID,
+//   app_secret: process.env.YELP_SECRET
+// })
+//
 
 
 
 $(document).ready(function(){
   $visitedBars = $('#visitedBars')
   $nonVisitedBar = $('nonVisitedBar')
-  $form = $('#search')
-  $searchTerm = $('#searchTerm')
+  $searchButton = $('#search-button')
 
-  $form.on('submit', function(e) {
-    yelp.search({term: `${$searchTerm.val()}`, categories: 'bars', location: '90291', limit: 5})
-      .then(function (data) {
+
+  $searchButton.on('click', function(e) {
+    e.preventDefault()
+    $searchTerm = $('#searchTerm').val()
+    console.log($searchTerm)
+    $.ajax({
+      url: '/search?term=' + $searchTerm,
+      method: 'get'
+    })
+      .done(function (data) {
         yelpInfo = data
+        console.log(data)
       })
 
-
   })
+
+
 
 
 })
