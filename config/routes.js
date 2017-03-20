@@ -9,7 +9,7 @@ var {about} = require('../controllers/staticpages')
 var {index} = require('../controllers/index')
 
 function authenticatedUser(req, res, next) {
-	if (req.isAuthenticated()) return;
+	if (req.isAuthenticated()) return next();
 
 	res.redirect('/');
 }

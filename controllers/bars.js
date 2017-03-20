@@ -9,14 +9,32 @@ function index(req, res) {
 	});
 }
 
-function create (req, res) {
-	var newBar = new Bar(req.body);
-
-	newBar.save(function(err, savedBar) {
+function createBar(req, res) {
+	console.log('req.body is', req.body);
+	User.findById(req.body.user, function(err, user) {
 		if (err) throw err;
 
-		res.json(savedBar);
-	});
+		console.log(user);
+		user.bars.push({
+			name: req.body.name,
+			description: req.body.description
+		})
+
+		user.save(function(err, user) {
+			if (err) throw err;
+
+			res.redirect('/');
+		})
+	})
+
+
+	// var newBar = new Bar(req.body);
+
+	// newBar.save(function(err, savedBar) {
+	// 	if (err) throw err;
+
+	// 	res.json(savedBar);
+	// });
 }
 
 
