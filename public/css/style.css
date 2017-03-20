@@ -55,5 +55,15 @@ form {
 
 .jumbotron {
   margin: 0 auto;
-  width: 50%;
+  width: 80%;
+}
+
+.bar-info-text {
+  width: 80%;
+  background-color: white;
+}
+
+img {
+  margin: 0 auto;
+  width: 500px;
 }
