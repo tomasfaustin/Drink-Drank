@@ -23,20 +23,36 @@ button {
   margin: 20px !important;
 }
 
+/*msgbox on landing page*/
 .msgbox {
   margin: 0 auto;
   width: 80%;
   border-radius: 10px;
   border: 1px solid black;
-  /*background: url('http://static.flavors.me/dynamic_images/background/0447e1158adf46048ae1c08b9d16103e');*/
+  background: url('http://static.flavors.me/dynamic_images/background/0447e1158adf46048ae1c08b9d16103e');
 }
 
 .container {
   display: flex;
 }
 
+/*add space inbetween boxs on index*/
 .list {
-  border: 10px solid yellow !important;
+  margin: 10px;
+  height: 500px;
+}
+
+.barsBox {
+  width: 90%;
+  margin: 0 auto;
+}
+
+li {
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 5px auto;
+  max-width: 75%;
+  background-color: white;
 }
 
 .fb-login {
@@ -48,32 +64,39 @@ button {
   margin: 0 auto;
   width: 50%;
 }
-
+/*forms on signup and login page*/
 form {
   margin: 0 auto;
   width: 50%;
 }
-
+/*jumbo on barinfo*/
 .jumbotron {
   margin: 0 auto;
   width: 80%;
 }
-
+/*bar info text*/
 .bar-info-text {
   width: 80%;
   margin: 0 auto;
 }
-
+/*image on barinfo page*/
 img {
   margin: 0 auto;
   display: block;
   width: 500px;
 }
-
+/*search box left on index page*/
 .left {
   background-color: red !important;
+  width: 45% !important;
+  border-radius: 10px !important;
 }
-
+/*search box right on index page*/
 .right {
   background-color: green !important;
+  width: 45% !important;
+  border-radius: 10px !important;
+}
+ul{
+  list-style-type: none;
 }
