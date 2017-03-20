@@ -1,15 +1,29 @@
-h1{
-
-  margin: 20px !important;
-
-}
-#msgBoxText{
-nt;
-}
-button{
+h1 {
   margin: 20px !important;
 }
-.msgbox{
+
+
+/*Sign up page styling*/
+#signup {
+  margin: 0 auto;
+  width: 50%;
+}
+
+#index-header {
+  margin: 0 auto;
+  width: 50%;
+}
+
+/* Home page display box text*/
+#msgBoxText {
+}
+
+/*Button styling*/
+button {
+  margin: 20px !important;
+}
+
+.msgbox {
   margin: 0 auto;
   width: 80%;
   border-radius: 10px;
@@ -17,11 +31,49 @@ button{
   /*background: url('http://static.flavors.me/dynamic_images/background/0447e1158adf46048ae1c08b9d16103e');*/
 }
 
-.container{
+.container {
   display: flex;
 }
 
-.list{
-  border: 10px solid blue !important;
+.list {
+  border: 10px solid yellow !important;
+}
 
+.fb-login {
+  margin: 0 auto;
+  width: 50%;
+}
+
+#login {
+  margin: 0 auto;
+  width: 50%;
+}
+
+form {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.jumbotron {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.bar-info-text {
+  width: 80%;
+  margin: 0 auto;
+}
+
+img {
+  margin: 0 auto;
+  display: block;
+  width: 500px;
+}
+
+.left {
+  background-color: red !important;
+}
+
+.right {
+  background-color: green !important;
 }
