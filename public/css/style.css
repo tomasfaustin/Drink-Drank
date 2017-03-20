@@ -96,13 +96,13 @@ img {
 }
 /*search box left on index page*/
 .left {
-  background-color: red !important;
+  background-color: white !important;
   width: 45% !important;
   border-radius: 10px !important;
 }
 /*search box right on index page*/
 .right {
-  background-color: green !important;
+  background-color: white !important;
   width: 45% !important;
   border-radius: 10px !important;
 }
