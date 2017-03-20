@@ -60,10 +60,11 @@ form {
 
 .bar-info-text {
   width: 80%;
-  background-color: white;
+  margin: 0 auto;
 }
 
 img {
   margin: 0 auto;
+  display: block;
   width: 500px;
 }
