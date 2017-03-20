@@ -14,7 +14,7 @@ function index(req, res) {
 
 function search(req, res) {
   console.log(req.query)
-  yelp.search({term: req.query.term, categories: 'bars', location: '90210', price: '1,2,3', limit: 10})
+  yelp.search({term: req.query.term, categories: 'bars', location: '90210', limit: 50})
   .then(function (data) {
       console.log(data);
     res.json(data)
