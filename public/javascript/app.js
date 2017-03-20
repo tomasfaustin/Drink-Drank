@@ -1,4 +1,3 @@
-
 var $visitedBars
 var $nonVisitedBar
 
