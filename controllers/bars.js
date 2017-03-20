@@ -1,13 +1,20 @@
 var Bar  = require('../models/bar'),
 		User = require('../models/user');
 
-function index(req, res) {
-	User.find({}, function(err, bars) {
-		if (err) throw err;
 
-		res.json(bars);
-	});
-}
+// function index(req, res) {
+// 	User.find({}, function(err, bars) {
+// 		if (err) throw err;
+//
+// 		res.json(bars);
+// 	});
+// }
+
+function newBar(req, res) {
+	User.find({}, (err, ))
+
+	}
+
 
 function createBar(req, res) {
 	console.log('req.body is', req.body);
@@ -17,7 +24,7 @@ function createBar(req, res) {
 		console.log(user);
 		user.bars.push({
 			name: req.body.name,
-			description: req.body.description
+			image_url: req.body.image_url
 		})
 
 		user.save(function(err, user) {
@@ -40,4 +47,7 @@ function createBar(req, res) {
 
 
 
-module.exports = {}
+
+module.exports = {
+	createBar: createBar
+}
