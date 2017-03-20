@@ -4,7 +4,7 @@
   <div class="alert alert-danger"><%= message %></div>
 <% } %>
 
-<form id="signup-form" method="post" action="/signup">
+<form method="post" action="/signup">
   <div class="form-group">
     <label for="email">Email</label>
     <input class="form-control" type="text" name="email" id="email">
@@ -19,7 +19,6 @@
 </form>
 
 <br>
-<hr>
 <div class="fb-login">
  <h2>Login/Register with Facebook:</h2>
 <a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a>
