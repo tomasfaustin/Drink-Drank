@@ -1,43 +1,53 @@
 var Bar  = require('../models/bar'),
-		User = require('../models/user');
+        User = require('../models/user');
+
 
 // function index(req, res) {
-// 	User.find({}, function(err, bars) {
-// 		if (err) throw err;
+//     User.find({}, function(err, bars) {
+//         if (err) throw err;
 //
-// 		res.json(bars);
-// 	});
+//         res.json(bars);
+//     });
 // }
 
+function newBar(req, res) {
+    User.find({}, (err, ))
+
+    }
+
+
 function createBar(req, res) {
-	console.log('req.body is', req.body);
-	User.findById(req.body.user, function(err, user) {
-		if (err) throw err;
+    console.log('req.body is', req.body);
+    User.findById(req.body.user, function(err, user) {
+        if (err) throw err;
 
-		console.log(user);
-		user.bars.push({
-			name: req.body.name,
-			description: req.body.description
-		})
+        console.log(user);
+        user.bars.push({
+            name: req.body.name,
+            image_url: req.body.image_url
+        })
 
-		user.save(function(err, user) {
-			if (err) throw err;
+        user.save(function(err, user) {
+            if (err) throw err;
 
-			res.redirect('/');
-		})
-	})
+            res.redirect('/');
+        })
+    })
 
 
-	// var newBar = new Bar(req.body);
+    // var newBar = new Bar(req.body);
 
-	// newBar.save(function(err, savedBar) {
-	// 	if (err) throw err;
+    // newBar.save(function(err, savedBar) {
+    //     if (err) throw err;
 
-	// 	res.json(savedBar);
-	// });
+    //     res.json(savedBar);
+    // });
 }
 
 
 
 
-module.exports = {}
+
+module.exports = {
+    createBar: createBar
+}

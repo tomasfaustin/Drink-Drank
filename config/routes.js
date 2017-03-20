@@ -3,7 +3,7 @@ var express 				= require('express'),
 		bodyParser			= require('body-parser'),
 		// methodOverride	= require('method-override'),
 		passport				= require('passport');
-
+		
 var {home, getSignup, postSignup, getLogin, postLogin, getLogout, getFacebook, getFacebookCallback} = require('../controllers/users');
 var {about} = require('../controllers/staticpages')
 var {index, search, barInfo} = require('../controllers/index')
