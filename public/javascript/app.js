@@ -16,22 +16,22 @@ var yelpInfo
 $(document).ready(function(){
   $visitedBars = $('#visitedBars')
   $nonVisitedBar = $('nonVisitedBar')
-  $form = $('#search')
+  $searchButton = $('#search-button')
 
 
-  $form.on('submit', function(e) {
-    $searchTerm = $('#searchTerm')
+  $searchButton.on('click', function(e) {
+    e.preventDefault()
+    $searchTerm = $('#searchTerm').val()
+    console.log($searchTerm)
     $.ajax({
-      url: 'https://api.yelp.com/v3/businesses/search?term=' + $searchTerm + '&categories=bars&location=90291&limit=5',
-      headers: {'Authorization': 'Bearer fLveZdK9txmlU-Anng1LZlZAn2GLQyDZUPSjdWad-XXer34dGkZ7QkI3R590v9S1ESdnmWQPhNLNafb7-I6hclnw2j46EvS3ogU-SWqkf4UijCLZyC6TZnbcesTKWHYx'}
-      .then(function (data) {
+      url: '/search?term=' + $searchTerm,
+      method: 'get'
+    })
+      .done(function (data) {
         yelpInfo = data
         console.log(data)
       })
-      .catch(function (err) {
-        console.log(err);
-      })
-    })
+
   })
 
 
