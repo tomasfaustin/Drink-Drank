@@ -34,7 +34,6 @@ function postLogin(req, res) {
 function getLogout(req, res) {
 	req.logout();
 	res.redirect('/about');
-	console.log('logged out')
 }
 
 
