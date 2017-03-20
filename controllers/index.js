@@ -3,8 +3,8 @@ var passport = require('passport');
 var yelpApiV3 = require("yelp-api-v3")
 
 var yelp = new yelpApiV3({
-  app_id: 'VI82LqJT6cMnePtHQvs0kQ',
-  app_secret: 'unGVrhljw51FKvR11T4DV97qMiI5JQ5pMdcKUDOnUcsincEwLENFEqU3SEGqYr11'
+  app_id: process.env.YELP_ID,
+  app_secret: process.env.YELP_SECRET
 });
 
 
