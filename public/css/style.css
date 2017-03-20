@@ -1,6 +1,10 @@
 h1 {
   margin: 20px !important;
 }
+h2 {
+  text-align: center;
+
+}
 
 
 /*Sign up page styling*/
@@ -117,6 +121,6 @@ ul {
 }
 #profile-box{
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   width: 50%;
 }
