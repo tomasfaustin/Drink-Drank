@@ -25,11 +25,13 @@ button {
 
 /*msgbox on landing page*/
 .msgbox {
+  color: white !important;
   margin: 0 auto;
   width: 80%;
   border-radius: 10px;
   border: 1px solid black;
-  background: url('http://static.flavors.me/dynamic_images/background/0447e1158adf46048ae1c08b9d16103e');
+  background-size: 100% !important;
+  background: url('http://www.campusghanta.com/wp-content/uploads/2012/01/drink.jpg');
 }
 
 .container {
@@ -52,7 +54,7 @@ li {
   border-radius: 5px;
   margin: 5px auto;
   max-width: 75%;
-  background-color: white;
+  /*background-color: white;*/
 }
 
 .fb-login {
