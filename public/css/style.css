@@ -115,3 +115,8 @@ ul {
   width: 200px;
   height: 200px;
 }
+#profile-box{
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+}
