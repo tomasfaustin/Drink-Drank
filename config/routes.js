@@ -34,6 +34,7 @@ router.route('/login')
 router.route('/logout')
 	.get(getLogout);
 
+// route for search page 
 router.route('/search')
 	.get(search);
 
