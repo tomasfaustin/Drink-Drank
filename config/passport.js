@@ -20,7 +20,6 @@ module.exports = function(passport) {
     passReqToCallback : true
   }, function(req, email, password, callback) {
     process.nextTick(function() {
-
       // Find a user with this e-mail
       User.findOne({ 'local.email' :  email }, function(err, user) {
         if (err) return callback(err);
@@ -33,11 +32,13 @@ module.exports = function(passport) {
 
           // Create a new user
           var newUser            = new User();
+          newUser.local.name     = req.body.name;
           newUser.local.email    = email;
           newUser.local.password = newUser.encrypt(password);
 
           newUser.save(function(err) {
             if (err) throw err;
+            console.log('working?')
             return callback(null, newUser);
           });
         }
