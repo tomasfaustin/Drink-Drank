@@ -4,7 +4,7 @@ var express 				= require('express'),
 		// methodOverride	= require('method-override'),
 		passport				= require('passport');
 
-var {home, getSignup, postSignup, getLogin, postLogin, getFacebook, getFacebookCallback} = require('../controllers/users');
+var {home, getSignup, postSignup, getLogin, postLogin, getLogout, getFacebook, getFacebookCallback} = require('../controllers/users');
 var {about} = require('../controllers/staticpages')
 var {index} = require('../controllers/index')
 
@@ -30,6 +30,9 @@ router.route('/signup')
 router.route('/login')
 	.get(getLogin)
 	.post(postLogin)
+
+router.route('/logout')
+	.get(getLogout)
 
 //route for facebook auth and login
 router.route('/auth/facebook')

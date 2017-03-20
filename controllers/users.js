@@ -31,6 +31,12 @@ function postLogin(req, res) {
 	return loginProperty(req, res);
 }
 
+function getLogout(req, res) {
+	req.logout();
+	res.redirect('/about');
+	console.log('logged out')
+}
+
 
  // =====================================
  // FACEBOOK ACTIONS=====================
@@ -66,6 +72,7 @@ module.exports = {
 	postSignup: postSignup,
 	getLogin: getLogin,
 	postLogin: postLogin,
+	getLogout: getLogout,
 	getFacebook: getFacebook,
 	getFacebookCallback: getFacebookCallback
 }
