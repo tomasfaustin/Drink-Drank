@@ -1,6 +1,10 @@
 h1 {
   margin: 20px !important;
 }
+h2 {
+  text-align: center;
+
+}
 
 
 /*Sign up page styling*/
@@ -15,7 +19,9 @@ h1 {
 }
 
 /* Home page display box text*/
-#msgBoxText {
+.msgBoxText {
+    font-size: 24px !important;
+    background-color: rgba(0, 0, 0, .3) !important;
 }
 
 /*Button styling*/
@@ -25,11 +31,14 @@ button {
 
 /*msgbox on landing page*/
 .msgbox {
+  color: white !important;
   margin: 0 auto;
+  text-align: center;
   width: 80%;
   border-radius: 10px;
   border: 1px solid black;
-  background: url('http://static.flavors.me/dynamic_images/background/0447e1158adf46048ae1c08b9d16103e');
+  background-size: 100% !important;
+  background: url('http://www.campusghanta.com/wp-content/uploads/2012/01/drink.jpg');
 }
 
 .container {
@@ -52,7 +61,7 @@ li {
   border-radius: 5px;
   margin: 5px auto;
   max-width: 75%;
-  background-color: white;
+  /*background-color: white;*/
 }
 
 .fb-login {
@@ -87,16 +96,31 @@ img {
 }
 /*search box left on index page*/
 .left {
-  background-color: red !important;
+  background-color: white !important;
   width: 45% !important;
   border-radius: 10px !important;
 }
 /*search box right on index page*/
 .right {
-  background-color: green !important;
+  background-color: white !important;
   width: 45% !important;
   border-radius: 10px !important;
 }
-ul{
+
+ul {
   list-style-type: none;
+}
+
+.learn-more-btn {
+  background-color: rgba(255, 255, 255, 0.7); !important;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+}
+#profile-box{
+  margin: 0 auto;
+  text-align: left;
+  width: 50%;
 }
