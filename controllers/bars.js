@@ -1,13 +1,13 @@
 var Bar  = require('../models/bar'),
 		User = require('../models/user');
 
-function index(req, res) {
-	User.find({}, function(err, bars) {
-		if (err) throw err;
-
-		res.json(bars);
-	});
-}
+// function index(req, res) {
+// 	User.find({}, function(err, bars) {
+// 		if (err) throw err;
+//
+// 		res.json(bars);
+// 	});
+// }
 
 function createBar(req, res) {
 	console.log('req.body is', req.body);
