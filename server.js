@@ -12,7 +12,8 @@ var express 			= require('express'),
 
 require('dotenv').config();
 
-mongoose.connect('mongodb://localhost/test-db-p3');
+var db = process.env.MONGODB_URI || 'mongodb://localhost/test-db-p3';
+mongoose.connect(db);
 
 app.use(morgan('dev'));
 app.use(cookieParser());

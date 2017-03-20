@@ -18,7 +18,7 @@ router.route('/')
 	.get(home);
 
 router.route('/index')
-	.get(index);
+	.get(authenticatedUser, index);
 
 router.route('/about')
 	.get(about);
