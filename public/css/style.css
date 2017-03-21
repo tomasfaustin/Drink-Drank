@@ -119,12 +119,16 @@ ul {
   width: 200px;
   height: 200px;
 }
-#profile-box{
+#profile-box {
   margin: 0 auto;
   text-align: left;
   width: 50%;
 }
-.center{
+.bar-results, .big-box {
   margin: 0 auto !important;
-  width: 80%  !important;
+  width: 50%  !important;
+}
+
+.bar-results-image {
+  width: 250px;
 }
