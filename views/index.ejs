@@ -3,20 +3,24 @@
 <div class="container">
 <br>
   <div class="col-md-6 list left">
-    <h1 class="index-list-title" >Visited</h1>
+    <h1 class="index-list-title draggable" >Visited</h1>
     <ul class="list-unstyled" id="drank-list">
-      <li class="index-items">Drank Bar 1</li>
-      <li class="index-items">Drank Bar 2</li>
-      <li class="index-items">Drank Bar 23</li>
+      <% for (var i = 0; i < user.bars.length; i++) { %>
+        <% if (user.bars[i].visited) { %>
+          <li class="index-items draggable"><%= user.bars[i].name %></li>
+        <% } %>
+      <% } %>
     </ul>
   </div>
 
   <div class="col-md-6 list right">
     <h1 class="index-list-title">Visit Soon</h1>
       <ul class="list-unstyle" id="drink-list">
-        <li class="index-items">Drink Bar 1</li>
-        <li class="index-items">Drink Bar 2</li>
-        <li class="index-items">Drink Bar 23</li>
+        <% for (var i = 0; i < user.bars.length; i++) { %>
+          <% if (!user.bars[i].visited) { %>
+            <li class="index-items draggable"><%= user.bars[i].name %></li>
+          <% } %>
+        <% } %>
       </ul>
   </div>
 

@@ -11,6 +11,18 @@ var yelpInfo
 // })
 //
 
+// function addToList(bar) {
+//   return $(`<li id="bar-${user.bar._id}" class="index-items"><button class="delBtn">X</button></li>`).draggable({
+//     snap: 'ul',
+//     stop: updateHandler
+//   })
+// }
+
+
+
+
+
+
 
 $(document).ready(function(){
   $visitedBars = $('#visitedBars')
@@ -19,7 +31,8 @@ $(document).ready(function(){
   // new droppable ul for visited bars
   $drankList = $('#drank-list').droppable()
   // new droppable ul for unvisited bars
-  $drinkList = $('#drink-list').droppable()
+  $('#drink-list').droppable()
+  $('.draggable').draggable()
 
 
   $searchButton.on('click', function(e) {
@@ -38,7 +51,7 @@ $(document).ready(function(){
 
   })
 
-  
+
 
 
 })
