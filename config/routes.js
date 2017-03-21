@@ -38,6 +38,7 @@ router.route('/logout')
 router.route('/search')
 	.get(search);
 
+
 // route to Bar Info
 router.route('/barInfo')
 	.get(barInfo);

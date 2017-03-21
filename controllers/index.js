@@ -12,6 +12,8 @@ function index(req, res) {
   res.render('index.ejs')
 }
 
+
+
 function search(req, res) {
   console.log(req.query)
   yelp.search({term: req.query.term, categories: 'bars', location: '90210', limit: 5})
