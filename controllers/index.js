@@ -17,7 +17,7 @@ function search(req, res) {
   yelp.search({term: req.query.term, categories: 'bars', location: '90210', limit: 5})
   .then(function (data) {
       console.log(data);
-    res.json(data)
+    res.json(data);
   })
   .catch(function (err) {
       console.error(err);
