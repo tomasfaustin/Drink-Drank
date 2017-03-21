@@ -1,10 +1,16 @@
 h1 {
   margin: 20px !important;
 }
-h2 {
+
+.index-list-title{
+  text-align: center;
+}
+
+
+/*h2 {
   text-align: center;
 
-}
+}*/
 
 
 /*Sign up page styling*/
@@ -15,13 +21,13 @@ h2 {
 
 #index-header {
   margin: 0 auto;
-  width: 50%;
+  width: 40%;
 }
 
 /* Home page display box text*/
-.msgBoxText {
+.msg-box-text {
     font-size: 24px !important;
-    background-color: rgba(0, 0, 0, .3) !important;
+    background-color: rgba(0, 0, 0, .2) !important;
 }
 
 /*Button styling*/
@@ -55,13 +61,13 @@ button {
   width: 90%;
   margin: 0 auto;
 }
-
-li {
+/*making the border around list items*/
+.index-items {
   border: 2px solid black;
   border-radius: 5px;
   margin: 5px auto;
   max-width: 75%;
-  /*background-color: white;*/
+  text-align: center;
 }
 
 .fb-login {
@@ -118,9 +124,24 @@ ul {
 .profile-pic {
   width: 200px;
   height: 200px;
+  border-radius: 10px;
+
+
 }
-#profile-box{
+
+#profile-box {
   margin: 0 auto;
   text-align: left;
   width: 50%;
+}
+
+.bar-results, .big-box {
+  margin: 0 auto !important;
+  width: 40%  !important;
+}
+
+.bar-results-image {
+  border: 1px solid gray;
+  width: 50%;
+  border-radius: 10px;
 }
