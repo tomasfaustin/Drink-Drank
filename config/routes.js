@@ -5,8 +5,9 @@ var express 				= require('express'),
 		passport				= require('passport');
 
 var {home, getSignup, postSignup, getLogin, postLogin, getLogout, getFacebook, getFacebookCallback} = require('../controllers/users');
-var {about} = require('../controllers/staticpages')
-var {index, search, barInfo, postSearch} = require('../controllers/index')
+var {about} = require('../controllers/staticpages');
+var {index, search, barInfo, postSearch} = require('../controllers/index');
+var {createBar} = require('../controllers/bars');
 
 function authenticatedUser(req, res, next) {
 	if (req.isAuthenticated()) return next();
@@ -19,6 +20,9 @@ router.route('/')
 
 router.route('/index')
 	.get(index);
+
+router.route('/bar')
+	.get(createBar);
 
 router.route('/about')
 	.get(about);
