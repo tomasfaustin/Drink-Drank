@@ -22,7 +22,9 @@ function search(req, res) {
   .catch(function (err) {
       console.error(err);
   });
-  // res.render('search.ejs')
+}
+function getSearch(req, res) {
+  res.render('search.ejs');
 }
 
 function barInfo(req, res) {
@@ -32,5 +34,6 @@ function barInfo(req, res) {
 module.exports = {
   index: index,
   search: search,
-  barInfo: barInfo
+  barInfo: barInfo,
+  getSearch: getSearch
 }
