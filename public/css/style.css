@@ -126,9 +126,15 @@ ul {
 }
 .bar-results, .big-box {
   margin: 0 auto !important;
-  width: 50%  !important;
+  width: 40%  !important;
 }
 
 .bar-results-image {
-  width: 250px;
+
+  width: 50%;
+}
+.bar-results-text{
+
+  margin-left: 1px;
+  width: 50%;
 }
