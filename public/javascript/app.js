@@ -12,11 +12,14 @@ var yelpInfo
 //
 
 
-
 $(document).ready(function(){
   $visitedBars = $('#visitedBars')
-  $nonVisitedBar = $('nonVisitedBar')
+  $nonVisitedBar = $('#nonVisitedBar')
   $searchButton = $('#search-button')
+  // new droppable ul for visited bars
+  $drankList = $('#drank-list').droppable()
+  // new droppable ul for unvisited bars
+  $drinkList = $('#drink-list').droppable()
 
 
   $searchButton.on('click', function(e) {
