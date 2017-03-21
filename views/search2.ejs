@@ -1,2 +1,8 @@
-<h2><%= bar.name %></h1><br>
-<h2><%= bar.location.city %></h2>
+<% for (var i=0; i < 5; i++) { %>
+<div id="barinfo">
+  <h2><%= bar[i].name %></h2>
+  <h3><%= bar[i].location.city %></h3>
+  <br>
+  <a href="/index" class="btn btn-primary btn-xs">Add me!</a>
+</div>
+<% } %>

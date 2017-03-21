@@ -20,7 +20,7 @@ function search(req, res) {
   .then(function (data) {
       // console.log(data);
       var jsonString = JSON.parse(data);
-      res.render('search2', {bar: jsonString.businesses[0]});
+      res.render('search2', {bar: jsonString.businesses});
     // res.json(data);
   })
   .catch(function (err) {
