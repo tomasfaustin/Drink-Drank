@@ -25,9 +25,9 @@ h1 {
 }
 
 /* Home page display box text*/
-.msgBoxText {
+.msg-box-text {
     font-size: 24px !important;
-    background-color: rgba(0, 0, 0, .3) !important;
+    background-color: rgba(0, 0, 0, .2) !important;
 }
 
 /*Button styling*/
