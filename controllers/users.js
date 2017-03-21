@@ -18,6 +18,7 @@ function postSignup(req, res) {
 }
 
 function getLogin(req, res) {
+	console.log('logged in')
 	res.render('login.ejs', { message: req.flash('loginMessage') });
 }
 
@@ -32,6 +33,7 @@ function postLogin(req, res) {
 }
 
 function getLogout(req, res) {
+	console.log('logged out')
 	req.logout();
 	res.redirect('/');
 }
