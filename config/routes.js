@@ -22,7 +22,7 @@ router.route('/index')
 	.get(index);
 
 router.route('/bar')
-	.get(createBar);
+	.post(createBar);
 
 router.route('/about')
 	.get(about);
