@@ -21,7 +21,8 @@ function search(req, res) {
       // console.log(data);
       var jsonString = JSON.parse(data);
       // jsonBarObj = JSON.parse(jsonString).businesses;
-      res.json(jsonString.businesses[0]);
+      // res.json(jsonString.businesses[0]);
+      res.render('search2', {bar: jsonString.businesses[0]});
       // var one = jsonBussObj.length;
     // res.json(data);
   })
@@ -29,8 +30,15 @@ function search(req, res) {
       console.error(err);
   });
 }
+// put this back!
+// function getSearch(req, res) {
+//   res.render('search.ejs');
+// }
+
+//clean this up
 function getSearch(req, res) {
-  res.render('search.ejs');
+  console.log(req.body)
+  res.redirect('/search/?term=' + req.body.searchTerm);
 }
 
 function barInfo(req, res) {
