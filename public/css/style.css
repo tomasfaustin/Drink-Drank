@@ -141,7 +141,7 @@ ul {
 }
 
 .bar-results-image {
-
+  border: 1px solid gray;
   width: 50%;
   border-radius: 10px;
 }
