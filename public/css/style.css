@@ -124,3 +124,7 @@ ul {
   text-align: left;
   width: 50%;
 }
+.center{
+  margin: 0 auto !important;
+  width: 80%  !important;
+}
