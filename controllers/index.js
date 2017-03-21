@@ -19,7 +19,7 @@ function search(req, res) {
       // console.log(data);
       var jsonString = JSON.parse(data);
       // jsonBarObj = JSON.parse(jsonString).businesses;
-      console.log(jsonString.businesses[0].location);
+      res.json(jsonString.businesses[0]);
       // var one = jsonBussObj.length;
     // res.json(data);
   })
