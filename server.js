@@ -24,7 +24,7 @@ app.use(ejsLayouts);
 app.set('views', './views');
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(session({ secret: 'drink drank' }));
+app.use(session({ secret: 'drink drank', cookie: {maxAge: 14400000} }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());

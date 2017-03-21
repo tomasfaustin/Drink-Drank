@@ -16,12 +16,14 @@
       </div>
   </div>
 <!-- </a> -->
-  <form action="/bar" method="POST">
-    <input type="hidden" value="<%= bar[i].name %>" name="name">
-    <input type="hidden" value="<%= bar[i].image_url %>" name="image_url">
-    <input type="hidden" value="<%= bar[i].location.city %>" name="location">
-    <input type="submit" value="Add Bar!">
-  </form>
+  <% if (user) { %> 
+    <form action="/bar" method="POST">
+      <input type="hidden" value="<%= bar[i].name %>" name="name">
+      <input type="hidden" value="<%= bar[i].image_url %>" name="image_url">
+      <input type="hidden" value="<%= bar[i].location.city %>" name="location">
+      <input type="submit" value="Add Bar!">
+    </form>
+  <% } %>
   <!-- <a href="/index" class="btn btn-primary btn-xs" id="button<%= i %>">Add me!</a> -->
 <hr>
 <% } %>

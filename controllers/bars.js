@@ -26,7 +26,7 @@ function createBar(req, res) {
         user.save(function(err, user) {
             if (err) throw err;
 
-            res.redirect('/');
+            res.redirect('/index');
         })
     })
 
