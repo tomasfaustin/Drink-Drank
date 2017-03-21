@@ -1,5 +1,5 @@
 var Bar  = require('../models/bar'),
-        User = require('../models/user');
+    User = require('../models/user');
 
 
 // function index(req, res) {
@@ -10,27 +10,23 @@ var Bar  = require('../models/bar'),
 //     });
 // }
 
-function newBar(req, res) {
-    User.find({}, (err, ))
-
-    }
-
-
 function createBar(req, res) {
     console.log('req.body is', req.body);
-    User.findById(req.body.user, function(err, user) {
+    console.log(req.user);
+    User.findById(req.user._id, function(err, user) {
         if (err) throw err;
 
         console.log(user);
         user.bars.push({
             name: req.body.name,
-            image_url: req.body.image_url
+            image_url: req.body.image_url,
+            location: req.body.location
         })
 
         user.save(function(err, user) {
             if (err) throw err;
 
-            res.redirect('/');
+            res.redirect('/index');
         })
     })
 
