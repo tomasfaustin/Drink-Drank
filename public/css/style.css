@@ -118,6 +118,9 @@ ul {
 .profile-pic {
   width: 200px;
   height: 200px;
+  border-radius: 10px;
+
+
 }
 #profile-box {
   margin: 0 auto;
@@ -132,9 +135,5 @@ ul {
 .bar-results-image {
 
   width: 50%;
-}
-.bar-results-text{
-
-  margin-left: 1px;
-  width: 50%;
+  border-radius: 10px;
 }
