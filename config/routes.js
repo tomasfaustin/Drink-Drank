@@ -36,7 +36,7 @@ router.route('/logout')
 
 // route for search page
 router.route('/search')
-	.get(getSearch);
+	.get(search);
 
 // route to Bar Info
 router.route('/barInfo')

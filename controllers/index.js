@@ -16,8 +16,12 @@ function search(req, res) {
   console.log(req.query)
   yelp.search({term: req.query.term, categories: 'bars', location: '90210', limit: 5})
   .then(function (data) {
-      console.log(data);
-    res.json(data);
+      // console.log(data);
+      var jsonString = JSON.parse(data);
+      // jsonBarObj = JSON.parse(jsonString).businesses;
+      console.log(jsonString.businesses[0].location);
+      // var one = jsonBussObj.length;
+    // res.json(data);
   })
   .catch(function (err) {
       console.error(err);
