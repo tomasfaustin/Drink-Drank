@@ -20,10 +20,7 @@ function search(req, res) {
   .then(function (data) {
       // console.log(data);
       var jsonString = JSON.parse(data);
-      // jsonBarObj = JSON.parse(jsonString).businesses;
-      // res.json(jsonString.businesses[0]);
       res.render('search2', {bar: jsonString.businesses[0]});
-      // var one = jsonBussObj.length;
     // res.json(data);
   })
   .catch(function (err) {
@@ -31,12 +28,12 @@ function search(req, res) {
   });
 }
 // put this back!
-// function getSearch(req, res) {
-//   res.render('search.ejs');
-// }
+function getSearch(req, res) {
+  res.render('search.ejs');
+}
 
 //clean this up
-function getSearch(req, res) {
+function postSearch(req, res) {
   console.log(req.body)
   res.redirect('/search/?term=' + req.body.searchTerm);
 }
@@ -49,5 +46,8 @@ module.exports = {
   index: index,
   search: search,
   barInfo: barInfo,
-  getSearch: getSearch
+  getSearch: getSearch,
+  postSearch: postSearch
+  // postSearch: postSearch
+
 }
