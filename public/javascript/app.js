@@ -30,6 +30,7 @@ $(document).ready(function(){
       .done(function (data) {
         yelpInfo = data
         console.log(data)
+        $('#bars').append('<li>' + data.name + '</li>')
       })
 
   })

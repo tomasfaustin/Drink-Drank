@@ -1,0 +1,9 @@
+<a rel="nofollow" rel="noreferrer"href = "http://www.yelp.com"> <img src = http://s3-media4.ak.yelpcdn.com/assets/2/www/img/9b7b8f0fecd7/developers/Powered_By_Yelp_Yellow.png>  </a>
+<% for (var i=0; i < 5; i++) { %>
+<div id="barinfo">
+  <h2><%= bar[i].name %></h2>
+  <h3><%= bar[i].location.city %></h3>
+  <br>
+  <a href="/index" class="btn btn-primary btn-xs">Add me!</a>
+</div>
+<% } %>

@@ -12,19 +12,30 @@ function index(req, res) {
   res.render('index.ejs')
 }
 
+
+
 function search(req, res) {
   console.log(req.query)
   yelp.search({term: req.query.term, categories: 'bars', location: '90210', limit: 5})
   .then(function (data) {
-      console.log(data);
-    res.json(data)
+      // console.log(data);
+      var jsonString = JSON.parse(data);
+      res.render('search2', {bar: jsonString.businesses});
+    // res.json(data);
   })
   .catch(function (err) {
       console.error(err);
   });
 }
-function getSearch(req, res) {
-  res.render('search.ejs');
+// put this back!
+// function getSearch(req, res) {
+//   res.render('search.ejs');
+// }
+
+//clean this up
+function postSearch(req, res) {
+  console.log(req.body)
+  res.redirect('/search/?term=' + req.body.searchTerm);
 }
 
 function barInfo(req, res) {
@@ -35,5 +46,8 @@ module.exports = {
   index: index,
   search: search,
   barInfo: barInfo,
-  getSearch: getSearch
+  // getSearch: getSearch,
+  postSearch: postSearch
+  // postSearch: postSearch
+
 }
