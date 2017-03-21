@@ -3,10 +3,10 @@ var express 				= require('express'),
 		bodyParser			= require('body-parser'),
 		// methodOverride	= require('method-override'),
 		passport				= require('passport');
-		
+
 var {home, getSignup, postSignup, getLogin, postLogin, getLogout, getFacebook, getFacebookCallback} = require('../controllers/users');
 var {about} = require('../controllers/staticpages')
-var {index, search, barInfo} = require('../controllers/index')
+var {index, search, barInfo, getSearch} = require('../controllers/index')
 
 function authenticatedUser(req, res, next) {
 	if (req.isAuthenticated()) return next();
@@ -36,7 +36,7 @@ router.route('/logout')
 
 // route for search page
 router.route('/search')
-	.get(search);
+	.get(getSearch);
 
 // route to Bar Info
 router.route('/barInfo')
