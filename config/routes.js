@@ -6,7 +6,7 @@ var express 				= require('express'),
 
 var {home, getSignup, postSignup, getLogin, postLogin, getLogout, getFacebook, getFacebookCallback} = require('../controllers/users');
 var {about} = require('../controllers/staticpages')
-var {index, search, barInfo, getSearch} = require('../controllers/index')
+var {index, search, barInfo, postSearch} = require('../controllers/index')
 
 function authenticatedUser(req, res, next) {
 	if (req.isAuthenticated()) return next();
@@ -39,7 +39,7 @@ router.route('/logout')
 // 	.get(search);
 router.route('/search')
 	.get(search)
-	.post(getSearch);
+	.post(postSearch);
 
 
 // route to Bar Info

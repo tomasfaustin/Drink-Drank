@@ -28,9 +28,9 @@ function search(req, res) {
   });
 }
 // put this back!
-function getSearch(req, res) {
-  res.render('search.ejs');
-}
+// function getSearch(req, res) {
+//   res.render('search.ejs');
+// }
 
 //clean this up
 function postSearch(req, res) {
@@ -46,7 +46,7 @@ module.exports = {
   index: index,
   search: search,
   barInfo: barInfo,
-  getSearch: getSearch,
+  // getSearch: getSearch,
   postSearch: postSearch
   // postSearch: postSearch
 
