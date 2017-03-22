@@ -2,6 +2,12 @@ h1 {
   margin: 20px !important;
 }
 
+body{
+  background-image: url('http://i.imgur.com/0asnqv3.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 .index-list-title{
   text-align: center;
   color: black;
@@ -38,9 +44,9 @@ h1 {
   text-align: center;
   width: 80%;
   border-radius: 10px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   background-size: 100% !important;
-  background: url('http://www.campusghanta.com/wp-content/uploads/2012/01/drink.jpg');
+  /*background: url('http://www.campusghanta.com/wp-content/uploads/2012/01/drink.jpg');*/
 }
 
 .container {
@@ -133,6 +139,8 @@ ul {
   margin: 0 auto;
   text-align: left;
   width: 50%;
+  overflow-y: scroll;
+  background-size: cover;
 }
 
 .bar-results, .big-box {
