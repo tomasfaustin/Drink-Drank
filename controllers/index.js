@@ -1,8 +1,9 @@
 var passport  = require('passport'),
-    yelpApiV3 = require("yelp-api-v3"),
-    yelp      = new yelpApiV3({
-      app_id      : process.env.YELP_ID,
-      app_secret  : process.env.YELP_SECRET
+    yelpApiV3 = require("yelp-api-v3");
+    
+var yelp      = new yelpApiV3({
+  app_id      : process.env.YELP_ID,
+  app_secret  : process.env.YELP_SECRET
 });
 
 function index(req, res) {
