@@ -11,11 +11,12 @@ function index(req, res) {
 }
 
 function search(req, res) {
-  console.log(req.query);
   var searchTerm = req.query.term,
-      zipSearch  = req.query.zip === '' ? '90210' : req.query.zip;
+      openNow    = req.query.open === 'true' ? true : false,
+      zipSearch  = req.query.zip === '' || req.query.zip.length !== 5 ? '90210' : req.query.zip;
 
-  yelp.search({term: searchTerm, categories: 'bars', location: zipSearch, limit: 5})
+  console.log('open:', openNow);
+  yelp.search({term: searchTerm, categories: 'bars', location: zipSearch, limit: 5, open_now: openNow})
   .then(function (data) {
     var jsonString = JSON.parse(data);
     res.render('search2', {bar: jsonString.businesses});
@@ -27,7 +28,7 @@ function search(req, res) {
 }
 
 function postSearch(req, res) {
-  res.redirect('/search/?term=' + req.body.searchTerm + '&zip=' + req.body.zipSearch);
+  res.redirect('/search/?term=' + req.body.searchTerm + '&zip=' + req.body.zipSearch + '&open=' + req.body.openNow);
 }
 
 function barInfo(req, res) {

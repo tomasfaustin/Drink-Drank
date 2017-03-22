@@ -1,28 +1,32 @@
 <!-- <a rel="nofollow" rel="noreferrer"href = "http://www.yelp.com"> <img src = http://s3-media4.ak.yelpcdn.com/assets/2/www/img/9b7b8f0fecd7/developers/Powered_By_Yelp_Yellow.png>  </a> -->
+<% var results = bar.length > 5 ? 5 : bar.length %>
+<% if (results > 0) { %>
+  <% for (var i=0; i < results; i++) { %>
+  <!-- <a href="/barinfo"> -->
+    <div class="container-fluid">
+       <div class="row">
+           <div class="col-md-6">
+             <img class="bar-results-image" src="<%= bar[i].image_url %>" alt="Bar image">
+           </div>
+           <div class="col-md-6">
+             <h4><%= bar[i].name %></h4>
+             <br>
+             <h4><%= bar[i].location.city %></h4>
+           </div>
 
-<% for (var i=0; i < 5; i++) { %>
-<!-- <a href="/barinfo"> -->
-  <div class="container-fluid">
-     <div class="row">
-         <div class="col-md-6">
-           <img class="bar-results-image" src="<%= bar[i].image_url %>" alt="Bar image">
-         </div>
-         <div class="col-md-6">
-           <h4><%= bar[i].name %></h4>
-           <br>
-           <h4><%= bar[i].location.city %></h4>
-         </div>
+        </div>
+    </div>
+    <% if (user) { %> 
+      <form action="/bar" method="POST">
+        <input type="hidden" value="<%= bar[i].name %>" name="name">
+        <input type="hidden" value="<%= bar[i].image_url %>" name="image_url">
+        <input type="hidden" value="<%= bar[i].location.city %>" name="location">
+        <input type="submit" value="Add Bar!">
+      </form>
+    <% } %>
 
-      </div>
-  </div>
-  <% if (user) { %> 
-    <form action="/bar" method="POST">
-      <input type="hidden" value="<%= bar[i].name %>" name="name">
-      <input type="hidden" value="<%= bar[i].image_url %>" name="image_url">
-      <input type="hidden" value="<%= bar[i].location.city %>" name="location">
-      <input type="submit" value="Add Bar!">
-    </form>
+  <hr>
   <% } %>
-
-<hr>
+<% } else { %>
+  <h1>Sorry, your search returned no results.  Please try again.</h1>
 <% } %>
