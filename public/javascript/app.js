@@ -12,7 +12,7 @@ var yelpInfo
 //
 
 function addToList(bar) {
-  return $(`<li id="bar-${bar._id}" class="index-items draggable">${user.bar.name}</li>`).draggable({
+  return $(`<li id="bar-${bar._id}" class="index-items draggable">${bar.name}</li>`).draggable({
     snap: 'ul',
     stop: updateHandler
   })
