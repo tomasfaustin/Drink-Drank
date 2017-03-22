@@ -7,7 +7,7 @@
     <ul class="list-unstyled droppable" id="drank-list">
       <% for (var i = 0; i < user.bars.length; i++) { %>
         <% if (user.bars[i].visited) { %>
-          <li id="bar-<%= user.bars[i]._id %>" class="index-items draggable"><%= user.bars[i].name %></li>
+          <li id="bar-<%= user.bars[i]._id %>" class="index-items draggable"><%= user.bars[i].name %><span class="delete">X</span></%></li>
         <% } %>
       <% } %>
     </ul>
@@ -18,7 +18,7 @@
       <ul class="list-unstyle droppable" id="drink-list">
         <% for (var i = 0; i < user.bars.length; i++) { %>
           <% if (!user.bars[i].visited) { %>
-            <li id="bar-<%= user.bars[i]._id %>" class="index-items draggable"><%= user.bars[i].name %></li>
+            <li id="bar-<%= user.bars[i]._id %>" class="index-items draggable"><%= user.bars[i].name %><span class="delete">X</span></li>
           <% } %>
         <% } %>
       </ul>

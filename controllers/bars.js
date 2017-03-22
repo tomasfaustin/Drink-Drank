@@ -61,11 +61,29 @@ function updateBar(req, res) {
   })
 }
 
+function deleteBar(req, res) {
+  var id = req.params.id;
+
+  User.findById(req.user._id, function(err, user) {
+    if (err) throw err;
+
+    var bar = user.bars.id(id);
+
+    user.bars.pull(id);
+    user.save(function(err, updatedUser) {
+      if (err) throw err;
+
+      res.json({message: 'Bar deleted from User'});
+    })
+  })
+}
+
 
 
 
 
 module.exports = {
     createBar: createBar,
-    updateBar: updateBar
+    updateBar: updateBar,
+    deleteBar: deleteBar
 }

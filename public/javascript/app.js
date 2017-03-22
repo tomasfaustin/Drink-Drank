@@ -12,7 +12,7 @@ var yelpInfo
 //
 
 function addToList(bar) {
-  return $(`<li id="bar-${bar._id}" class="index-items draggable">${bar.name}</li>`).draggable({
+  return $(`<li id="bar-${bar._id}" class="index-items draggable">${bar.name}<span class="delete">X</span></li>`).draggable({
     snap: 'ul',
     stop: updateHandler
   })
@@ -39,6 +39,20 @@ function updateHandler() {
         $nonVisitedBars.append(barHTML)
       }
 
+    }
+  )
+}
+
+function deleteHandler() {
+  var html = $(this).parent();
+  var id = html.attr('id').slice(4);
+
+  $.ajax({
+    type: 'DELETE',
+    url: '/bar/' + id
+  }).then(
+    function() {
+      html.remove();
     }
   )
 }
@@ -73,6 +87,9 @@ $(document).ready(function(){
       })
 
   })
+
+  $visitedBars.on('click', '.delete', deleteHandler)
+  $nonVisitedBars.on('click', '.delete', deleteHandler)
 
 
 
