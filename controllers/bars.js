@@ -41,19 +41,39 @@ function createBar(req, res) {
 }
 
 function updateBar(req, res) {
-  var id = req.body.id;
+  var id = req.params.id;
+  console.log(req.user)
   User.findById(req.user._id, function(err, user) {
-
-
-    Bar.findById(id, function(err, bar) {
-      if (err || !bar) throw err
+    if (err) throw err
+  var bar = user.bars.id(id)
+  console.log(bar)
+    // Bar.findById(id, function(err, bar) {
+    //   if (err || !bar) throw err
 
       bar.visited = !bar.visited
-      bar.save(function(err, updatedBar) {
+      user.save(function(err, updatedUser) {
         if (err) throw err
+        var updatedBar = updatedUser.bars.id(id)
         res.json(updatedBar)
         console.log("Updated?")
       })
+    // })
+  })
+}
+
+function deleteBar(req, res) {
+  var id = req.params.id;
+
+  User.findById(req.user._id, function(err, user) {
+    if (err) throw err;
+
+    var bar = user.bars.id(id);
+
+    user.bars.pull(id);
+    user.save(function(err, updatedUser) {
+      if (err) throw err;
+
+      res.json({message: 'Bar deleted from User'});
     })
   })
 }
@@ -64,5 +84,6 @@ function updateBar(req, res) {
 
 module.exports = {
     createBar: createBar,
-    updateBar: updateBar
+    updateBar: updateBar,
+    deleteBar: deleteBar
 }

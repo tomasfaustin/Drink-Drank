@@ -7,7 +7,7 @@ var express 				= require('express'),
 var {home, getSignup, postSignup, getLogin, postLogin, getLogout, getFacebook, getFacebookCallback} = require('../controllers/users');
 var {about} = require('../controllers/staticpages');
 var {index, search, barInfo, postSearch} = require('../controllers/index');
-var {createBar, updateBar} = require('../controllers/bars');
+var {createBar, updateBar, deleteBar} = require('../controllers/bars');
 
 function authenticatedUser(req, res, next) {
 	if (req.isAuthenticated()) return next();
@@ -25,7 +25,8 @@ router.route('/bar')
 	.post(createBar);
 
 router.route('/bar/:id')
-  .patch(updateBar);
+  .patch(updateBar)
+	.delete(deleteBar);
 
 router.route('/about')
 	.get(about);
