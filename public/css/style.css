@@ -57,17 +57,18 @@ button {
   height: 500px;
 }
 
-.barsBox {
+/*.barsBox {
   width: 90%;
   margin: 0 auto;
-}
+}*/
 /*making the border around list items*/
 .index-items {
   border: 2px solid black;
   border-radius: 5px;
   margin: 5px auto;
-  max-width: 75%;
+  max-width: 330px;
   text-align: center;
+  list-style: none;
 }
 
 .fb-login {
