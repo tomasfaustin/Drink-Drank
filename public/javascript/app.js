@@ -1,15 +1,8 @@
-var $visitedBars
-var $nonVisitedBars
-var $form
-var $searchTerm
-var yelpInfo
-
-//
-// var yelp = new Yelp ({
-//   app_id: process.env.YELP_ID,
-//   app_secret: process.env.YELP_SECRET
-// })
-//
+var $visitedBars,
+    $nonVisitedBars,
+    $form,
+    $searchTerm,
+    yelpInfo
 
 function addToList(bar) {
   return $(`<li id="bar-${bar._id}" class="index-items draggable">${bar.name}<span class="delete">X</span></li>`).draggable({
@@ -19,9 +12,8 @@ function addToList(bar) {
 }
 
 function updateHandler() {
-  var html = $(this)
-  var id = html.attr('id').slice(4)
-
+  var html = $(this),
+      id = html.attr('id').slice(4);
 
   $.ajax({
     type: 'PATCH',
@@ -29,14 +21,14 @@ function updateHandler() {
     data: {}
   }).then(
     function(jsonBar) {
-      html.remove()
+      html.remove();
 
-      var barHTML = addToList(jsonBar)
+      var barHTML = addToList(jsonBar);
 
       if(jsonBar.visited) {
-        $visitedBars.append(barHTML)
+        $visitedBars.append(barHTML);
       } else {
-        $nonVisitedBars.append(barHTML)
+        $nonVisitedBars.append(barHTML);
       }
 
     }
@@ -44,8 +36,8 @@ function updateHandler() {
 }
 
 function deleteHandler() {
-  var html = $(this).parent();
-  var id = html.attr('id').slice(4);
+  var html = $(this).parent(),
+      id = html.attr('id').slice(4);
 
   $.ajax({
     type: 'DELETE',
@@ -59,13 +51,15 @@ function deleteHandler() {
 
 
 $(document).ready(function(){
-  $visitedBars = $('#visitedBars')
-  $nonVisitedBars = $('#nonVisitedBars')
-  $searchButton = $('#search-button')
+  $visitedBars = $('#visitedBars');
+  $nonVisitedBars = $('#nonVisitedBars');
+  $searchButton = $('#search-button');
+
   // new droppable ul for visited bars
-  $('#drank-list').droppable()
+  $('#drank-list').droppable();
+
   // new droppable ul for unvisited bars
-  $('#drink-list').droppable()
+  $('#drink-list').droppable();
 
   $('.draggable').draggable({
     snap: 'ul',
@@ -73,25 +67,22 @@ $(document).ready(function(){
   })
 
   $searchButton.on('click', function(e) {
-    e.preventDefault()
-    $searchTerm = $('#searchTerm').val()
-    console.log($searchTerm)
+    e.preventDefault();
+    $searchTerm = $('#searchTerm').val();
+
     $.ajax({
       url: '/search?term=' + $searchTerm,
       method: 'get'
     })
       .done(function (data) {
-        yelpInfo = data
-        console.log(data)
-        $('#bars').append('<li>' + data.name + '</li>')
+        yelpInfo = data;
+
+        $('#bars').append('<li>' + data.name + '</li>');
       })
 
   })
 
-  $visitedBars.on('click', '.delete', deleteHandler)
-  $nonVisitedBars.on('click', '.delete', deleteHandler)
-
-
-
+  $visitedBars.on('click', '.delete', deleteHandler);
+  $nonVisitedBars.on('click', '.delete', deleteHandler);
 
 })
