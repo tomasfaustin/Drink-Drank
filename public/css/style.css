@@ -5,6 +5,7 @@ h1 {
 .index-list-title{
   text-align: center;
   color: white;
+  text-shadow: 5px 4px 1px black !important;
 }
 
 
