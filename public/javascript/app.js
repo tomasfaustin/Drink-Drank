@@ -2,6 +2,7 @@ var $visitedBars,
     $nonVisitedBars,
     $form,
     $searchTerm,
+    $zipSearch,
     yelpInfo
 
 function addToList(bar) {
@@ -68,10 +69,11 @@ $(document).ready(function(){
   $searchButton.on('click', function(e) {
     e.preventDefault();
     $searchTerm = $('#searchTerm').val();
+    $zipSearch  = $('#zipSearch').val();
 
     $.ajax({
-      url: '/search?term=' + $searchTerm,
-      method: 'get'
+      url: `/search`,
+      method: 'GET'
     })
       .done(function (data) {
         yelpInfo = data;
