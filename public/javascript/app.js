@@ -66,23 +66,6 @@ $(document).ready(function(){
     stop: updateHandler
   })
 
-  $searchButton.on('click', function(e) {
-    e.preventDefault();
-    $searchTerm = $('#searchTerm').val();
-    $zipSearch  = $('#zipSearch').val();
-
-    $.ajax({
-      url: `/search`,
-      method: 'GET'
-    })
-      .done(function (data) {
-        yelpInfo = data;
-
-        $('#bars').append('<li>' + data.name + '</li>');
-      })
-
-  })
-
   $visitedBars.on('click', '.delete', deleteHandler);
   $nonVisitedBars.on('click', '.delete', deleteHandler);
 
