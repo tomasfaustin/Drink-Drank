@@ -60,7 +60,9 @@ $(document).ready(function(){
 
   $('.draggable').draggable({
     snap: 'ul',
-    stop: updateHandler
+    stop: updateHandler,
+    stack: ".draggable"
+
   })
 
   $visitedBars.on('click', '.delete', deleteHandler);
