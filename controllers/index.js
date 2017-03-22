@@ -13,22 +13,27 @@ function index(req, res) {
 function search(req, res) {
   var searchTerm = req.query.term,
       openNow    = req.query.open === 'true' ? true : false,
+      price      = String(req.query.price),
       zipSearch  = req.query.zip === '' || req.query.zip.length !== 5 ? '90210' : req.query.zip;
 
-  console.log('open:', openNow);
-  yelp.search({term: searchTerm, categories: 'bars', location: zipSearch, limit: 5, open_now: openNow})
+  console.log('price:', price);
+  yelp.search({term: searchTerm, categories: 'bars', location: zipSearch, open_now: openNow, price: price})
   .then(function (data) {
     var jsonString = JSON.parse(data);
     res.render('search2', {bar: jsonString.businesses});
 
   })
   .catch(function (err) {
+      console.log('not working')
       console.error(err);
   });
 }
 
 function postSearch(req, res) {
-  res.redirect('/search/?term=' + req.body.searchTerm + '&zip=' + req.body.zipSearch + '&open=' + req.body.openNow);
+  // if (req.body.zipSearch === '')
+  //   res.redirect('search/?term=' + req.body.searchTerm + '&open=' + req.body.openNow + '&price=' + req.body.price);
+
+  res.redirect('/search/?term=' + req.body.searchTerm + '&zip=' + req.body.zipSearch + '&open=' + req.body.openNow + '&price=' + req.body.price);
 }
 
 function barInfo(req, res) {
