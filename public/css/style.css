@@ -22,6 +22,7 @@ h1 {
 
 #index-header {
   text-align: center;
+  font-size:  2em;
 }
 
 /* Home page display box text*/
@@ -64,7 +65,7 @@ h1 {
   color: black;
   margin: 5px auto;
   max-width: 330px;
-  height: 50px;
+  height: 60px;
   text-align: center;
   list-style: none;
   background-color: lightgray;
@@ -102,13 +103,13 @@ img {
 }
 /*search box left on index page*/
 .left {
-  background-color: white !important;
+  background-color: darkgray;
   width: 45% !important;
   border-radius: 10px !important;
 }
 /*search box right on index page*/
 .right {
-  background-color: white !important;
+  background-color: darkgray !important;
   width: 45% !important;
   border-radius: 10px !important;
 }
@@ -125,8 +126,6 @@ ul {
   width: 200px;
   height: 200px;
   border-radius: 10px;
-
-
 }
 
 #profile-box {
@@ -135,10 +134,11 @@ ul {
   width: 50%;
 }
 
-.bar-results, .big-box {
+/*Dont think this is being used anywere -billie */
+/*.bar-results, .big-box {
   margin: 0 auto !important;
   width: 40%  !important;
-}
+}*/
 
 .bar-results-image {
   border: 1px solid gray !important;
@@ -147,7 +147,6 @@ ul {
   border-radius: 10px !important;
 }
 .delete {
-  /*padding: 0;*/
   width: 20px;
   height: 20px;
   margin-top: 3px;
@@ -156,10 +155,15 @@ ul {
   background-size: 21px auto;
   background-repeat: no-repeat;
   float: right;
-  margin-right: 20px;
-  margin-top: 10px;
+  margin-right: 20%;
+  margin-top: 3%;
 }
 .bar-box{
   float: left;
-  margin-left: 90px;
+  margin-left: 20%;
+  max-width: 130px;
+  max-height: 40px;
+}
+.droppable {
+  padding-left: 0
 }

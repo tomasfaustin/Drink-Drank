@@ -1,12 +1,9 @@
 var $visitedBars,
     $nonVisitedBars,
-    $form,
-    $searchTerm,
-    $zipSearch,
     yelpInfo
 
 function addToList(bar) {
-  return $(`<li id="bar-${bar._id}" class="index-items draggable">${bar.name}<span class="delete">X</span></li>`).draggable({
+  return $(`<li id="bar-${bar._id}" class="index-items draggable"><div class="bar-box">${bar.name} <br> ${bar.location} </div><button class="delete"> </button></li>`).draggable({
     snap: 'ul',
     stop: updateHandler
   })

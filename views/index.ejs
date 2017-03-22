@@ -3,11 +3,11 @@
 <div class="container">
 <br>
   <div class="col-md-6 list left" id="visitedBars">
-    <h1 class="index-list-title " >Visited</h1>
+    <h1 class="index-list-title">Visited</h1>
     <ul class="list-unstyled droppable" id="drank-list">
       <% for (var i = 0; i < user.bars.length; i++) { %>
         <% if (user.bars[i].visited) { %>
-          <li id="bar-<%= user.bars[i]._id %>" class="index-items draggable"><%= user.bars[i].name %> <br> <%= user.bars[i].location%> <span class="delete"> X </span></%></li>
+          <li id="bar-<%= user.bars[i]._id %>" class="index-items draggable"><div class="bar-box"><%= user.bars[i].name %> <br> <%= user.bars[i].location%></div> <button class="delete"> </button></li>
         <% } %>
       <% } %>
     </ul>
@@ -17,11 +17,10 @@
     <h1 class="index-list-title">Visit Soon</h1>
       <ul class="list-unstyle droppable" id="drink-list">
         <% for (var i = 0; i < user.bars.length; i++) { %>
-
-          <% if (!user.bars[i].visited) { %>
-            <li id="bar-<%= user.bars[i]._id %>" class="index-items draggable"><div class="bar-box"><%= user.bars[i].name %> <br> <%= user.bars[i].location%></div> <button class="delete"> </button></li>
+        <% if (!user.bars[i].visited) { %>
+          <li id="bar-<%= user.bars[i]._id %>" class="index-items draggable"><div class="bar-box"><%= user.bars[i].name %> <br> <%= user.bars[i].location%></div> <button class="delete"> </button></li>
           <% } %>
-        <% } %>
+          <% } %>
       </ul>
   </div>
 
