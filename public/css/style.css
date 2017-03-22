@@ -45,6 +45,7 @@ body {
   text-align: center;
   width: 50%;
   border-radius: 10px;
+  background-size: 100%;
   /*border: 1px solid black;*/
   /*background-size: 100% !important;*/
   /*background: url('http://www.campusghanta.com/wp-content/uploads/2012/01/drink.jpg');*/
@@ -177,5 +178,3 @@ ul {
     background-size: 100%;
     background-repeat: no-repeat;
   }
-
-}
