@@ -72,7 +72,7 @@ $(document).ready(function(){
     $zipSearch  = $('#zipSearch').val();
 
     $.ajax({
-      url: `/search`,
+      url: '/search/?term=' + req.body.$searchTerm + '&zip=' + req.body.$zipSearch,
       method: 'GET'
     })
       .done(function (data) {
