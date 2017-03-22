@@ -14,6 +14,10 @@ You and your friends can use **DRINK/DRANK L.A.®** to keep track of your favori
 
 Just remember to drink responsibly. Cheers!
 
+## INCEPTION DECK
+
+[Link to Google Slides](https://docs.google.com/presentation/d/1uxT85MbGpy_QfKzctI9AatGsZRO34L84ZMVZXQwaQFs/edit?usp=sharing)
+
 ## TECH USED
 
 * MEN Stack
@@ -56,6 +60,3 @@ We would like the user to be able to search according to specific search paramet
 
 ## ERD
 ![ERD](./assets/images/ERD.jpg)
-
-
-[Link to Google Slides](https://docs.google.com/presentation/d/1uxT85MbGpy_QfKzctI9AatGsZRO34L84ZMVZXQwaQFs/edit?usp=sharing)
