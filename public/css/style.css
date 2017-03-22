@@ -30,10 +30,6 @@ h1 {
     background-color: rgba(0, 0, 0, .2) !important;
 }
 
-/*Button styling*/
-button {
-  margin: 20px !important;
-}
 
 /*msgbox on landing page*/
 .msgbox {
@@ -65,10 +61,13 @@ button {
 .index-items {
   border: 2px solid black;
   border-radius: 5px;
+  color: black;
   margin: 5px auto;
   max-width: 330px;
+  height: 50px;
   text-align: center;
   list-style: none;
+  background-color: lightgray;
 }
 
 .fb-login {
@@ -146,4 +145,21 @@ ul {
   width: 50% !important;
   height: 250px !important;
   border-radius: 10px !important;
+}
+.delete {
+  /*padding: 0;*/
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  border: none;
+  background-image: url('https://openclipart.org/download/226230/trash.svg');
+  background-size: 21px auto;
+  background-repeat: no-repeat;
+  float: right;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.bar-box{
+  float: left;
+  margin-left: 90px;
 }
