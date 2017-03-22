@@ -5,8 +5,11 @@ h1 {
 body {
   background-image: url('http://i.imgur.com/0asnqv3.jpg');
   /*background-repeat: no-repeat*/
-  background-size: 100%;
+  /*background-size: 100%;*/
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  /*flex: 1;*/
+  /*min-width: 900px;*/
 }
 
 .index-list-title{
@@ -45,7 +48,7 @@ body {
   text-align: center;
   width: 50%;
   border-radius: 10px;
-  background-size: 100%;
+  background-size: contain;
   /*border: 1px solid black;*/
   /*background-size: 100% !important;*/
   /*background: url('http://www.campusghanta.com/wp-content/uploads/2012/01/drink.jpg');*/
@@ -142,6 +145,7 @@ ul {
   text-align: left;
   width: 50%;
   overflow-y: scroll;
+  background-size: cover;
 }
 
 .bar-results, .big-box {
@@ -173,8 +177,7 @@ ul {
   margin-left: 90px;
 }
 
-@media query (max-width: 700px;) {
+@media (max-width: 600px) {
   body {
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-size: cover;
   }
