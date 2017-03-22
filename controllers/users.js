@@ -9,7 +9,7 @@ function postSignup(req, res) {
 	console.log(req.params)
 
 	var signUpStrategy = passport.authenticate('local-signup', {
-		successRedirect: '/',
+		successRedirect: '/index',
 		failureRedirect: '/signup',
 		failureFlash: true
 	});
@@ -24,7 +24,7 @@ function getLogin(req, res) {
 
 function postLogin(req, res) {
 	var loginProperty = passport.authenticate('local-login', {
-		successRedirect: '/',
+		successRedirect: '/index',
 		failureRedirect: '/login',
 		failureFlash: true
 	});
@@ -54,7 +54,7 @@ function getLogout(req, res) {
  // handle the callback after facebook has authenticated the user
  function getFacebookCallback(request, response) {
    var loginProperty = passport.authenticate('facebook', {
-     successRedirect : '/',
+     successRedirect : '/index',
      failureRedirect : '/login'
    });
 
