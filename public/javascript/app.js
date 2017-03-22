@@ -1,12 +1,17 @@
 var $visitedBars,
     $nonVisitedBars,
-    $form,
-    $searchTerm,
-    $zipSearch,
     yelpInfo
 
 function addToList(bar) {
-  return $(`<li id="bar-${bar._id}" class="index-items draggable">${bar.name}<span class="delete">X</span></li>`).draggable({
+  return $(`<li id="bar-${bar._id}" class="index-items draggable"><div class="bar-box">${bar.name} <br> ${bar.location} </div><button class="delete"> </button></li>`).draggable({
+
+    // <li id="bar-<%= user.bars[i]._id %>" class="index-items draggable">
+    //     <div class="bar-box">
+    //         <%= user.bars[i].name %> <br>
+    //             <%= user.bars[i].location%>
+    //     </div> <button class="delete"> </button></li>
+
+
     snap: 'ul',
     stop: updateHandler
   })
