@@ -30,7 +30,6 @@ function updateHandler() {
       } else {
         $nonVisitedBars.append(barHTML);
       }
-
     }
   )
 }
