@@ -29,15 +29,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
-
 require('./config/passport')(passport);
 
 app.use(function (req, res, next) {
 	global.user = req.user;
-	next()
+	next();
 });
-
-
 
 var routes = require('./config/routes');
 app.use('/', routes);
