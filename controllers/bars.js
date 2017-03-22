@@ -40,10 +40,29 @@ function createBar(req, res) {
     // });
 }
 
+function updateBar(req, res) {
+  var id = req.body.id;
+  User.findById(req.user._id, function(err, user) {
+
+
+    Bar.findById(id, function(err, bar) {
+      if (err || !bar) throw err
+
+      bar.visited = !bar.visited
+      bar.save(function(err, updatedBar) {
+        if (err) throw err
+        res.json(updatedBar)
+        console.log("Updated?")
+      })
+    })
+  })
+}
+
 
 
 
 
 module.exports = {
-    createBar: createBar
+    createBar: createBar,
+    updateBar: updateBar
 }

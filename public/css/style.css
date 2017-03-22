@@ -4,6 +4,7 @@ h1 {
 
 .index-list-title{
   text-align: center;
+  color: black;
 }
 
 
@@ -20,8 +21,7 @@ h1 {
 }
 
 #index-header {
-  margin: 0 auto;
-  width: 40%;
+  text-align: center;
 }
 
 /* Home page display box text*/
