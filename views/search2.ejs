@@ -15,7 +15,6 @@
 
       </div>
   </div>
-<!-- </a> -->
   <% if (user) { %> 
     <form action="/bar" method="POST">
       <input type="hidden" value="<%= bar[i].name %>" name="name">
@@ -24,6 +23,6 @@
       <input type="submit" value="Add Bar!">
     </form>
   <% } %>
-  <!-- <a href="/index" class="btn btn-primary btn-xs" id="button<%= i %>">Add me!</a> -->
+
 <hr>
 <% } %>

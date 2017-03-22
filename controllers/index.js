@@ -11,7 +11,11 @@ function index(req, res) {
 }
 
 function search(req, res) {
-  yelp.search({term: req.query.term, categories: 'bars', location: '90210', limit: 5})
+  console.log(req.query);
+  var searchTerm = req.query.term,
+      zipSearch  = req.query.zip === '' ? '90210' : req.query.zip;
+
+  yelp.search({term: searchTerm, categories: 'bars', location: zipSearch, limit: 5})
   .then(function (data) {
     var jsonString = JSON.parse(data);
     res.render('search2', {bar: jsonString.businesses});
@@ -23,7 +27,7 @@ function search(req, res) {
 }
 
 function postSearch(req, res) {
-  res.redirect('/search/?term=' + req.body.searchTerm);
+  res.redirect('/search/?term=' + req.body.searchTerm + '&zip=' + req.body.zipSearch);
 }
 
 function barInfo(req, res) {
