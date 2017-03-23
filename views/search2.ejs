@@ -4,26 +4,40 @@
   <% for (var i=0; i < results; i++) { %>
   <!-- <a href="/barinfo"> -->
     <div class="container-fluid">
-       <div class="row">
-           <div class="col-md-6">
+      <div class="col-md-2"></div>
+       <div class="row col-md-8">
+           <div style="float: left;" class="col-md-6">
              <img class="bar-results-image" src="<%= bar[i].image_url %>" alt="Bar image">
            </div>
-           <div class="col-md-6">
-             <h4><%= bar[i].name %></h4>
+           <div style="float: right" class="col-md-6">
+
+               <h4 style="margin: 0; display: inline-block">
+                 <%= bar[i].name %>
+               </h4>
+
              <br>
-             <h4><%= bar[i].location.city %></h4>
+             <h5><%= bar[i].location.city %></h5>
+             <h5><%= bar[i].location.address1 %></h5>
+             <h5><%= bar[i].price %></h5>
+             <% if (bar[i].rating % 1 === 0) {  %>
+               <!-- <h6>../assets/images/yelp_stars/<%=bar[i].rating%>.png</h6> -->
+               <img style="width: 102px; float: left" src="../assets/images/yelp_stars/<%=bar[i].rating%>.png" alt="rating">
+             <% } else { %>
+               <img style="width: 102px; float: left" src="../assets/images/yelp_stars/<%=bar[i].rating - .5%>_5.png" alt="rating">
+             <% } %>
+             <% if (user) { %>
+               <form style="float: left" action="/bar" method="POST">
+                 <input type="hidden" value="<%= bar[i].name %>" name="name">
+                 <input type="hidden" value="<%= bar[i].image_url %>" name="image_url">
+                 <input type="hidden" value="<%= bar[i].location.city %>" name="location">
+                 <input type="submit" value="Add Bar!">
+               </form>
+               <% } %>
            </div>
 
         </div>
+        <div class="col-md-2"></div>
     </div>
-    <% if (user) { %> 
-      <form action="/bar" method="POST">
-        <input type="hidden" value="<%= bar[i].name %>" name="name">
-        <input type="hidden" value="<%= bar[i].image_url %>" name="image_url">
-        <input type="hidden" value="<%= bar[i].location.city %>" name="location">
-        <input type="submit" value="Add Bar!">
-      </form>
-    <% } %>
 
   <hr>
   <% } %>
