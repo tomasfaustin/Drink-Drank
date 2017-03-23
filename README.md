@@ -38,9 +38,10 @@ We created two models--one for Users and one for Bars--that contain all of the i
 
 [Click here for Trello boards work flow](https://trello.com/b/4enMQKYM/project-3)
 
-## UNSOLVED PROBLEMS
+## UNSOLVED PROBLEMS/STRETCH GOALS
 
-We would like the user to be able to search according to specific search parameters(i.e., price, zip code, etc).
+* add text area field to added bars in order to keep updated notes for each bar
+* create "random" button that offers users a "bar roulette" option for finding new bars
 
 ## INSTALLATION INSTRUCTIONS
 
