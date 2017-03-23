@@ -30,6 +30,9 @@ router.route('/bar/:id')
 router.route('/about')
 	.get(about);
 
+router.route('/profile')
+	.get(profile)
+
 router.route('/signup')
 	.get(getSignup)
 	.post(postSignup);
