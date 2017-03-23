@@ -7,15 +7,15 @@
 
   <div class="col-md-4 list left" id="visitedBars">
     <h1 class="index-list-title">Visited</h1>
-    <ul class="list-unstyled droppable" id="drank-list"  style="overflow: scroll; height: 395px;">
+    <ul class="list-unstyled droppable" id="drank-list">
       <% for (var i = 0; i < user.bars.length; i++) { %>
         <% if (user.bars[i].visited) { %>
           <li id="bar-<%= user.bars[i]._id %>" class="index-items draggable">
             <div class="bar-box">
-              <% if (user.bars[i].name.length < 20) { %>
+              <% if (user.bars[i].name.length < 30) { %>
                 <%= user.bars[i].name %>
               <% } else { %>
-                <%= user.bars[i].name.substring(0, 19) %>...
+                <%= user.bars[i].name.substring(0, 29) %>...
               <% } %>
               <br>
               <a target="_blank" href="https://www.google.com/maps/place/<%= user.bars[i].name %>"><%= user.bars[i].address %></a> <br>
@@ -34,10 +34,10 @@
         <% if (!user.bars[i].visited) { %>
           <li id="bar-<%= user.bars[i]._id %>" class="index-items draggable">
             <div class="bar-box">
-              <% if (user.bars[i].name.length < 20) { %>
+              <% if (user.bars[i].name.length < 30) { %>
                 <%= user.bars[i].name %>
               <% } else { %>
-                <%= user.bars[i].name.substring(0, 19) %>...
+                <%= user.bars[i].name.substring(0, 29) %>...
               <% } %>
               <br>
               <a target="_blank" href="https://www.google.com/maps/place/<%= user.bars[i].name %>"><%= user.bars[i].address %></a> <br>

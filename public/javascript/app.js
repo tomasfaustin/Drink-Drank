@@ -5,18 +5,17 @@ var $visitedBars,
 function addToList(bar) {
   return $(`<li id="bar-${bar._id}" 
             class="index-items draggable">
-            <div class="bar-box">
-              ${bar.name.substring(0,19)} <br> 
+            <div class="bar-box"> 
+              ${bar.name.length > 30 ? 
+              bar.name.substring(0,30) + '...' : bar.name}
+            <br> 
             <a href="https://www.google.com/maps/place/${bar.name}">
               ${bar.address}
             </a> <br> 
               ${bar.location} 
             </div>
             <button class="delete"> </button></li>`).draggable({
-    containment: ".container",
-    revert: "invalid",
-    helper: "clone",
-    scroll: true,
+    snap: "ul",
     stop: updateHandler,
     stack: ".draggable"
   })
@@ -37,9 +36,9 @@ function updateHandler() {
       var barHTML = addToList(jsonBar);
 
       if(jsonBar.visited) {
-        $visitedBars.append(barHTML);
+        $visitedBars.prepend(barHTML);
       } else {
-        $nonVisitedBars.append(barHTML);
+        $nonVisitedBars.prepend(barHTML);
       }
     }
   )
@@ -61,8 +60,8 @@ function deleteHandler() {
 
 
 $(document).ready(function(){
-  $visitedBars = $('#visitedBars');
-  $nonVisitedBars = $('#nonVisitedBars');
+  $visitedBars = $('#drank-list');
+  $nonVisitedBars = $('#drink-list');
   $searchButton = $('#search-button');
 
   // new droppable ul for visited bars
