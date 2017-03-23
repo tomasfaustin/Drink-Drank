@@ -42,7 +42,11 @@ We would like the user to be able to search according to specific search paramet
 
 ## INSTALLATION INSTRUCTIONS
 
-
+* clone the repository into a local file
+* open terminal and navigate to repository
+* run npm install
+* run nodemon
+* open browser and navigate to localhost:3000
 
 ## MVP
 
