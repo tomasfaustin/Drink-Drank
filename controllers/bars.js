@@ -6,9 +6,10 @@ function createBar(req, res) {
     if (err) throw err;
 
     user.bars.push({
-      name: req.body.name,
-      image_url: req.body.image_url,
-      location: req.body.location
+      name      : req.body.name,
+      image_url : req.body.image_url,
+      location  : req.body.location,
+      address   : req.body.address 
     });
 
     user.save(function(err, user) {
