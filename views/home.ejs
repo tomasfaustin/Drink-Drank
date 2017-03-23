@@ -1,21 +1,25 @@
-<head><link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"></head>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+</head>
 
 <div class="msgbox">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1 class="splashtext"><strong> Drink/Drank L.A.</strong>® </h1>
+  <div class="box">
+    <span class="msg-box-text">A simple, user friendly app for finding local bars. Create and store lists of bars you love and the ones you'd like to visit.
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 class="splashtext"><strong> Drink/Drank L.A.</strong>® </h1>
-    <div class="box">
-        <strong class="msg-box-text">A simple, user friendly app for finding local bars. Create and store lists of bars you love and the ones you'd like to visit.
-          <br>
-          <br>
-          Click Sign Up or Login to get started.
-        </strong>
-    </div>
-    <br>
-    <a href="/about"><button type="button" class="btn btn-secondary btn-lg" id="homeb">Learn About Fancy AF</button></a>
+    <% if (!user) { %>
+      <a class="msg-box-text" href="/signup">Sign Up</a> or <a class="msg-box-text" href="/login">Login</a> to get started.
+    <% } %>
+    </span>
+  </div>
+  <br>
+  <a href="/about"><button type="button" class="add-bar-button btn btn-secondary btn-lg" id="homeb">Learn About Fancy AF</button></a>
 </div>

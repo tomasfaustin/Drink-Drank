@@ -27,7 +27,7 @@ body {
   width: auto;
   min-width: 1000px;
   max-width: 1000px;*/
-    background-position: top;
+  background-position: top;
   /*background-repeat: no-repeat*/
   /*background-size: 100%;*/
   background-repeat: no-repeat;
@@ -293,8 +293,9 @@ h4 {
   border: silver 1px solid;
 }*/
 
-@media (max-width: 600px) {
+@media (max-width: 1600px) {
   body {
+    background: black;
     background-size: cover;
   }
 }
