@@ -4,7 +4,7 @@ var express 		= require('express'),
 		passport		= require('passport');
 
 var {home, getSignup, postSignup, getLogin, postLogin, getLogout, getFacebook, getFacebookCallback} = require('../controllers/users'),
-		{about} = require('../controllers/staticpages'),
+		{about, profile} = require('../controllers/staticpages'),
 		{index, search, barInfo, postSearch} = require('../controllers/index'),
 		{createBar, updateBar, deleteBar} = require('../controllers/bars');
 
