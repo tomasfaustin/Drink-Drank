@@ -80,7 +80,7 @@ body {
 }
 
 .loginform {
-  margin: 100px;
+  margin: 150px 100px 100px 50px;
 }
 
 /*#fb {
@@ -207,6 +207,7 @@ ul {
 }
 
 #profile-box {
+  background-color: black;
   margin: 50px 22%;
 
   text-align: left;
