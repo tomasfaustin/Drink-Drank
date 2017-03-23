@@ -2,12 +2,21 @@ h1 {
   margin: 20px !important;
 }
 
+html {
+}
+
 body {
-  background-image: url('http://i.imgur.com/0asnqv3.jpg');
+  background: url('http://i.imgur.com/0asnqv3.jpg');
+  /*background-position: center;*/
+  /*width: 1000px;*/
+  /*height: auto;
+  width: auto;
+  min-width: 1000px;
+  max-width: 1000px;*/
+    /*background-position: center;*/
   /*background-repeat: no-repeat*/
   /*background-size: 100%;*/
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
   /*flex: 1;*/
   /*min-width: 900px;*/
 }
@@ -18,7 +27,19 @@ body {
   text-shadow: 5px 4px 1px black !important;
 }
 
+.form-control {
+  margin-right: 5px;
+  margin-left:  5px;
+}
+.navbar.navbar-default {
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
 
+#submit {
+  margin-right: 0px;
+}
 
 /*h2 {
   text-align: center;
@@ -36,6 +57,15 @@ body {
   text-align: center;
   font-size:  2em;
 }
+
+.loginform {
+  margin: 100px;
+}
+
+/*#fb {
+  background: url('http://www.freeiconspng.com/uploads/facebook-sign-in-button-png-26.png');
+
+}*/
 
 /* Home page display box text*/
 .msg-box-text {
@@ -59,6 +89,7 @@ body {
 
 .container {
   display: flex;
+  margin-top: 100px;
 }
 
 /*add space inbetween boxs on index*/
@@ -78,8 +109,8 @@ body {
   color: black;
   margin: 10px auto;
   max-width: 330px;
-  height: 60px;
-  text-align: center;
+  height: 80px;
+  text-align: left;
   list-style: none;
   background-color: lightgray;
 }
@@ -114,13 +145,22 @@ img {
   display: block;
   width: 500px;
 }
+
+#index-header {
+  margin-top: 100px;
+}
 /*search box left on index page*/
 .left {
   width: 45% !important;
   border: 1px solid gray;
   box-shadow: 1px 1px 15px rosybrown;
   border-radius: 10px !important;
-  background-image: url('http://designreflect.com/wp-content/uploads/2012/09/wooden-textures/Vintage-Grunge-Wood-Background.jpg')
+  /*background-color: grey;
+  opacity: .3;*/
+  background-image: url('http://finedininglovers.cdn.crosscast-system.com/BlogPost/xl_12525_trend-2016-cocktails-finedininglovers-tp.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 /*search box right on index page*/
 .right {
@@ -146,11 +186,16 @@ ul {
 }
 
 #profile-box {
-  margin: 100px;
+  margin: 100px 0px 50px 250px;
   text-align: left;
-  width: 50%;
+  width: 53%;
+  /*height: 60%;*/
   overflow-y: scroll;
-  background-size: cover;
+  background-size: fixed;
+  position: fixed;
+  /*border: grey 1px solid;*/
+  padding: 15px;
+  -webkit-overflow-scrolling: touch;
 }
 
 /*Dont think this is being used anywere -billie */
@@ -191,8 +236,14 @@ ul {
   border-radius: 50px;
   border: 2px solid black;
   /*background-color: rgba(250,250,250, .5);*/
-  background-color: rgba(218,165,32, .4);
+  background-color: rgba(225,225,225, .7);
 }
+
+a {
+  font-variant: small-caps;
+  font-size: 15px;
+}
+
 
 @media (max-width: 600px) {
   body {
