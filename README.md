@@ -22,7 +22,7 @@ Just remember to drink responsibly. Cheers!
 
 * MongoDB
 * Express
-* Node.js 
+* Node.js
 * AJAX
 * JavaScript
 * JQuery
@@ -31,7 +31,7 @@ Just remember to drink responsibly. Cheers!
 
 ## APPROACH
 
-We created two models--one for Users and one for Bars--that contain all of the information necessary to liaise between users and bars they will frequent. These models manage our users' data and databases.
+We created two models--one for Users and one for Bars--that contain all of the information necessary to liaise between users and bars they will keep in their "Visited" and "Unvisited" lists. These models manage our users' data and databases.
 
 
 ## TRELLO PAGE
