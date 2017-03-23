@@ -25,6 +25,7 @@
              <% } else { %>
                <img style="width: 102px; float: left" src="../assets/images/yelp_stars/<%=bar[i].rating - .5%>_5.png" alt="rating">
              <% } %>
+             <br>
              <% if (user) { %>
                <form style="float: left" action="/bar" method="POST">
                  <input type="hidden" value="<%= bar[i].name %>" name="name">
