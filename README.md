@@ -18,9 +18,11 @@ Just remember to drink responsibly. Cheers!
 
 [Link to Google Slides](https://docs.google.com/presentation/d/1uxT85MbGpy_QfKzctI9AatGsZRO34L84ZMVZXQwaQFs/edit?usp=sharing)
 
-## TECH USED
+## TECHNOLOGY USED
 
-* MEN Stack
+* MongoDB
+* Express
+* Node.js 
 * AJAX
 * JavaScript
 * JQuery
