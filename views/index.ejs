@@ -7,7 +7,7 @@
 
   <div class="col-md-4 list left" id="visitedBars">
     <h1 class="index-list-title">Visited</h1>
-    <ul class="list-unstyled droppable" id="drank-list">
+    <ul class="list-unstyled droppable" id="drank-list"  style="overflow: scroll; height: 395px;">
       <% for (var i = 0; i < user.bars.length; i++) { %>
         <% if (user.bars[i].visited) { %>
           <li id="bar-<%= user.bars[i]._id %>" class="index-items draggable">

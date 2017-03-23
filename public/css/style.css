@@ -302,7 +302,7 @@ h4 {
 
 @media (max-width: 1600px) {
   body {
-    /*background: black;*/
-    /*background-size: cover;*/
+    background: black;
+    background-size: cover;
   }
 }

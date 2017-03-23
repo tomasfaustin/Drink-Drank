@@ -13,7 +13,10 @@ function addToList(bar) {
               ${bar.location} 
             </div>
             <button class="delete"> </button></li>`).draggable({
-    snap: 'ul',
+    containment: ".container",
+    revert: "invalid",
+    helper: "clone",
+    scroll: true,
     stop: updateHandler,
     stack: ".draggable"
   })
