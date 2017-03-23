@@ -14,7 +14,7 @@ function search(req, res) {
   var searchTerm = req.query.term,
       openNow    = req.query.open === 'true' ? true : false,
       price      = String(req.query.price),
-      zipSearch  = req.query.zip === '' || req.query.zip.length !== 5 ? '90210' : req.query.zip;
+      zipSearch  = req.query.zip === '' || req.query.zip.length !== 5 ? '90401' : req.query.zip;
 
   console.log('price:', price);
   yelp.search({term: searchTerm, categories: 'bars', location: zipSearch, open_now: openNow, price: price})

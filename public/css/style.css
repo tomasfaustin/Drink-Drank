@@ -109,7 +109,6 @@ body {
 
 .container {
   display: flex;
-  margin-top: 100px;
 }
 
 /*add space inbetween boxs on index*/
@@ -167,7 +166,8 @@ img {
 }
 
 #index-header {
-  margin-top: 100px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 /*search box left on index page*/
 .left {
@@ -206,17 +206,19 @@ ul {
 }
 
 #profile-box {
-  margin: 100px 0px 50px 250px;
+  margin: 50px 22%;
+
   text-align: left;
-  width: 53%;
+
+  width: 50%;
   /*height: 60%;*/
   overflow-y: scroll;
   background-size: fixed;
-  position: fixed;
+
   /*border: grey 1px solid;*/
   padding: 15px;
   -webkit-overflow-scrolling: touch;
-  border: 1px dashed white;
+  border: 1px solid gray;
   /*background-color: white;*/
 }
 
@@ -236,19 +238,19 @@ ul {
 .delete {
   width: 20px;
   height: 20px;
-  margin-top: 3px;
   border: none;
   background-image: url('https://openclipart.org/download/226230/trash.svg');
   background-size: 21px auto;
   background-repeat: no-repeat;
   float: right;
-  margin-right: 20%;
-  margin-top: 3%;
+  margin-right: 6%;
+  margin-top: 8%;
 }
 .bar-box{
   float: left;
   margin-left: 20%;
-  max-width: 130px;
+  margin-top: 2%;
+  max-width: 180px;
   max-height: 40px;
 }
 .droppable {
@@ -267,12 +269,27 @@ a {
   font-size: 15px;
 }
 
+h4 {
+  margin-left: 0px !important;
+}
+
+.add-bar-button {
+  margin-top: 8px;
+  background-color: #e7e7e7;
+  color: black;
+  border-radius: 4px;
+}
+
+.add-bar-button:hover {
+  background-color: darkgray;
+  color: white;
+}
+
 /*.col-md-6 {
   height: 255px;
   width: 200px;
-  border: silver 1px solid;*/
-
-}
+  border: silver 1px solid;
+}*/
 
 @media (max-width: 600px) {
   body {
