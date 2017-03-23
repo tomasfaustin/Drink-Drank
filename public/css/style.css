@@ -58,6 +58,15 @@ body {
   font-size:  2em;
 }
 
+.loginform {
+  margin: 100px;
+}
+
+/*#fb {
+  background: url('http://www.freeiconspng.com/uploads/facebook-sign-in-button-png-26.png');
+
+}*/
+
 /* Home page display box text*/
 .msg-box-text {
     font-size: 24px !important;
@@ -100,8 +109,8 @@ body {
   color: black;
   margin: 10px auto;
   max-width: 330px;
-  height: 60px;
-  text-align: center;
+  height: 80px;
+  text-align: left;
   list-style: none;
   background-color: lightgray;
 }
@@ -177,7 +186,7 @@ ul {
 }
 
 #profile-box {
-  margin: 100px 0px 50px 100px;
+  margin: 100px 0px 50px 250px;
   text-align: left;
   width: 53%;
   /*height: 60%;*/
@@ -227,9 +236,13 @@ ul {
   border-radius: 50px;
   border: 2px solid black;
   /*background-color: rgba(250,250,250, .5);*/
-  background-color: rgba(218,165,32, .4);
+  background-color: rgba(225,225,225, .7);
 }
 
+a {
+  font-variant: small-caps;
+  font-size: 15px;
+}
 
 
 @media (max-width: 600px) {
