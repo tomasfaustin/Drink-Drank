@@ -269,8 +269,20 @@ a {
   font-size: 15px;
 }
 
+h4 {
+  margin-left: 0px !important;
+}
+
 .add-bar-button {
   margin-top: 8px;
+  background-color: #e7e7e7;
+  color: black;
+  border-radius: 4px;
+}
+
+.add-bar-button:hover {
+  background-color: darkgray;
+  color: white;
 }
 
 /*.col-md-6 {
