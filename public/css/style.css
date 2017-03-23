@@ -109,7 +109,6 @@ body {
 
 .container {
   display: flex;
-  margin-top: 100px;
 }
 
 /*add space inbetween boxs on index*/
@@ -167,7 +166,8 @@ img {
 }
 
 #index-header {
-  margin-top: 100px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 /*search box left on index page*/
 .left {
@@ -236,19 +236,19 @@ ul {
 .delete {
   width: 20px;
   height: 20px;
-  margin-top: 3px;
   border: none;
   background-image: url('https://openclipart.org/download/226230/trash.svg');
   background-size: 21px auto;
   background-repeat: no-repeat;
   float: right;
-  margin-right: 20%;
-  margin-top: 3%;
+  margin-right: 6%;
+  margin-top: 8%;
 }
 .bar-box{
   float: left;
   margin-left: 20%;
-  max-width: 130px;
+  margin-top: 2%;
+  max-width: 180px;
   max-height: 40px;
 }
 .droppable {
