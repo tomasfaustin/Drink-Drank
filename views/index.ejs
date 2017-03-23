@@ -1,38 +1,53 @@
 <h3 id="index-header">Click and drag bars into the appropriate list, or search bars above.</h3>
 
-<div class="container">
-    <br>
-    <div class="col-md-6 list left" id="visitedBars">
-        <h1 class="index-list-title">Visited</h1>
-        <ul class="list-unstyled droppable" id="drank-list">
-            <% for (var i = 0; i < user.bars.length; i++) { %>
-                <% if (user.bars[i].visited) { %>
-                    <li id="bar-<%= user.bars[i]._id %>" class="index-items draggable">
-                        <div class="bar-box">
-                            <%= user.bars[i].name %> <br>
-                                <%= user.bars[i].address %>
-                                <%= user.bars[i].location %>
-                        </div> <button class="delete"> </button></li>
-                    <% } %>
-                        <% } %>
-        </ul>
-    </div>
+<div class="col-md-1"></div>
+<div class="container col-md-10">
 
-    <div class="col-md-6 list right" id="nonVisitedBars">
-        <h1 class="index-list-title">Visit Soon</h1>
-        <ul class="list-unstyle droppable" id="drink-list">
-            <% for (var i = 0; i < user.bars.length; i++) { %>
-                <% if (!user.bars[i].visited) { %>
-                    <li id="bar-<%= user.bars[i]._id %>" class="index-items draggable">
-                        <div class="bar-box">
-                            <%= user.bars[i].name %> <br>
-                                <%= user.bars[i].address %>
-                                <%= user.bars[i].location %>
+  <div class="col-md-1"></div>
 
-                        </div> <button class="delete"> </button></li>
-                    <% } %>
-                        <% } %>
-        </ul>
-    </div>
+  <div class="col-md-4 list left" id="visitedBars">
+    <h1 class="index-list-title">Visited</h1>
+    <ul class="list-unstyled droppable" id="drank-list">
+      <% for (var i = 0; i < user.bars.length; i++) { %>
+        <% if (user.bars[i].visited) { %>
+          <li id="bar-<%= user.bars[i]._id %>" class="index-items draggable">
+            <div class="bar-box">
+              <% if (user.bars[i].name.length < 20) { %>
+                <%= user.bars[i].name %>
+              <% } else { %>
+                <%= user.bars[i].name.substring(0, 19) %>...
+              <% } %>
+              <br>
+              <a href="https://www.google.com/maps/place/<%= user.bars[i].name %>"><%= user.bars[i].address %></a> <br>
+              <%= user.bars[i].location %>
+            </div> 
+          <button class="delete"> </button></li>
+        <% } %>
+      <% } %>
+    </ul>
+  </div>
+
+  <div class="col-md-4 list right" id="nonVisitedBars">
+    <h1 class="index-list-title">Visit Soon</h1>
+    <ul class="list-unstyle droppable" id="drink-list">
+      <% for (var i = 0; i < user.bars.length; i++) { %>
+        <% if (!user.bars[i].visited) { %>
+          <li id="bar-<%= user.bars[i]._id %>" class="index-items draggable">
+            <div class="bar-box">
+              <% if (user.bars[i].name.length < 20) { %>
+                <%= user.bars[i].name %>
+              <% } else { %>
+                <%= user.bars[i].name.substring(0, 19) %>...
+              <% } %>
+              <br>
+              <a href="https://www.google.com/maps/place/<%= user.bars[i].name %>"><%= user.bars[i].address %></a> <br>
+              <%= user.bars[i].location %>
+            </div> 
+          <button class="delete"> </button></li>
+        <% } %>
+      <% } %>
+    </ul>
+  </div>
+  <div class="col-md-1"></div>
 
 </div>
