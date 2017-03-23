@@ -18,11 +18,6 @@
                 <%= user.bars[i].name.substring(0, 19) %>...
               <% } %>
               <br>
-              <% var addressArray = user.bars[i].address.split(' ') %>
-              <% var googleURL = 'google.com/maps/place/' %>
-              <% for (var i = 0; i < addressArray.length; i++) { %>
-                <% googleURL += (i !== addressArray.length - 1) ? addressArray[i] + '+' : addressArray[i] %>
-              <% } %>
               <a href="https://www.google.com/maps/place/<%= user.bars[i].name %>"><%= user.bars[i].address %></a> <br>
               <%= user.bars[i].location %>
             </div> 

@@ -206,17 +206,19 @@ ul {
 }
 
 #profile-box {
-  margin: 100px 0px 50px 250px;
+  margin: 50px 22%;
+
   text-align: left;
-  width: 53%;
+
+  width: 50%;
   /*height: 60%;*/
   overflow-y: scroll;
   background-size: fixed;
-  position: fixed;
+
   /*border: grey 1px solid;*/
   padding: 15px;
   -webkit-overflow-scrolling: touch;
-  border: 1px dashed white;
+  border: 1px solid gray;
   /*background-color: white;*/
 }
 
@@ -267,12 +269,15 @@ a {
   font-size: 15px;
 }
 
+.add-bar-button {
+  margin-top: 8px;
+}
+
 /*.col-md-6 {
   height: 255px;
   width: 200px;
-  border: silver 1px solid;*/
-
-}
+  border: silver 1px solid;
+}*/
 
 @media (max-width: 600px) {
   body {
