@@ -23,6 +23,9 @@ body {
   margin-left:  5px;
 }
 
+#submit {
+  margin-right: 0px;
+}
 
 /*h2 {
   text-align: center;
@@ -161,6 +164,7 @@ ul {
   height: 300px;
   overflow-y: scroll;
   background-size: cover;
+  position: fixed;
 }
 
 /*Dont think this is being used anywere -billie */
