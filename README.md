@@ -1,6 +1,6 @@
 # DRINK/DRANK L.A.®
 
-![wireframe](./assets/images/drink.jpeg)
+![wireframe](http://www.campusghanta.com/wp-content/uploads/2012/01/drink.jpg)
 
 ## INTRODUCTION
 
@@ -54,9 +54,9 @@ We would like the user to be able to search according to specific search paramet
 
 
 ## WIREFRAMES
-![wireframe1](./assets/images/splash.png)
-![wireframe2](./assets/images/search.png)
-![wireframe3](./assets/images/info.png)
+![wireframe1](./public/assets/images/splash.png)
+![wireframe2](./public/assets/images/search.png)
+![wireframe3](./public/assets/images/info.png)
 
 ## ERD
-![ERD](./assets/images/ERD.jpg)
+![ERD](./public/assets/images/ERD.jpg)
