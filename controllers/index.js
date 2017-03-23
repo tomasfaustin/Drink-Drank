@@ -1,6 +1,6 @@
 var passport  = require('passport'),
     yelpApiV3 = require("yelp-api-v3");
-    
+
 var yelp      = new yelpApiV3({
   app_id      : process.env.YELP_ID,
   app_secret  : process.env.YELP_SECRET
@@ -36,13 +36,9 @@ function postSearch(req, res) {
   res.redirect('/search/?term=' + req.body.searchTerm + '&zip=' + req.body.zipSearch + '&open=' + req.body.openNow + '&price=' + req.body.price);
 }
 
-function barInfo(req, res) {
-  res.render('barInfo.ejs');
-}
 
 module.exports = {
   index: index,
   search: search,
-  barInfo: barInfo,
   postSearch: postSearch
 }
