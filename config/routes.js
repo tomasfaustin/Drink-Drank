@@ -6,7 +6,8 @@ var express 		= require('express'),
 var {home, getSignup, postSignup, getLogin, postLogin, getLogout, getFacebook, getFacebookCallback} = require('../controllers/users'),
 		{about, profile} = require('../controllers/staticpages'),
 		{index, search, barInfo, postSearch} = require('../controllers/index'),
-		{createBar, updateBar, deleteBar} = require('../controllers/bars');
+		{createBar, updateBar, deleteBar} = require('../controllers/bars'),
+		{indexApi} = require('../controllers/api');
 
 function authenticatedUser(req, res, next) {
 	if (req.isAuthenticated()) return next();
@@ -47,6 +48,9 @@ router.route('/logout')
 router.route('/search')
 	.get(search)
 	.post(postSearch);
+
+router.route('/api')
+	.get(indexApi)
 
 //route for facebook auth and login
 router.route('/auth/facebook')
