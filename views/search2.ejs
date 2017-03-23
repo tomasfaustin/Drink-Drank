@@ -1,3 +1,6 @@
+<head><link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"></head>
+
+
 <!-- <a rel="nofollow" rel="noreferrer"href = "http://www.yelp.com"> <img src = http://s3-media4.ak.yelpcdn.com/assets/2/www/img/9b7b8f0fecd7/developers/Powered_By_Yelp_Yellow.png>  </a> -->
 <% var results = bar.length > 5 ? 5 : bar.length %>
 <% if (results > 0) { %>
@@ -6,12 +9,12 @@
     <div class="container-fluid">
       <div class="col-md-2"></div>
        <div class="row col-md-8">
-           <div style="float: left;" class="col-md-6">
-             <img class="bar-results-image" src="<%= bar[i].image_url %>" alt="Bar image">
+           <div style="float: left;" class="col-md-6" id="barimagebox">
+             <img class="bar-results-image" style="margin:10px" src="<%= bar[i].image_url %>" alt="Bar image">
            </div>
            <div style="float: right" class="col-md-6">
 
-               <h4 style="margin: 0; display: inline-block">
+               <h4 style="margin: 10px; display: inline-block">
                  <%= bar[i].name %>
                </h4>
 
@@ -39,8 +42,9 @@
         </div>
         <div class="col-md-2"></div>
     </div>
+<hr width=600px>
+<br>
 
-  <hr>
   <% } %>
 <% } else { %>
   <h1>Sorry, your search returned no results.  Please try again.</h1>

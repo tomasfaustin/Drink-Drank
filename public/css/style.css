@@ -1,7 +1,20 @@
 h1 {
   margin: 20px !important;
+  font-family: 'Oswald', sans-serif;
+  font-variant: small-caps;
 }
 
+h2{
+  font-family: 'Oswald', sans-serif;
+  font-variant: small-caps;
+}
+
+p {
+  font-family: 'Oswald', sans-serif;
+  /*font-variant: normal;*/
+  font-size: 15px;
+  color: white;
+}
 html {
 }
 
@@ -203,6 +216,8 @@ ul {
   /*border: grey 1px solid;*/
   padding: 15px;
   -webkit-overflow-scrolling: touch;
+  border: 1px dashed white;
+  /*background-color: white;*/
 }
 
 /*Dont think this is being used anywere -billie */
@@ -213,8 +228,8 @@ ul {
 
 .bar-results-image {
   /*border: 1px solid gray !important;*/
-  width: 105% !important;
-  height: 250px !important;
+  width: 300px !important;
+  height: 200px !important;
   margin: 0;
   /*border-radius: 10px !important;*/
 }
