@@ -178,10 +178,10 @@ img {
   border-radius: 10px !important;
   /*background-color: grey;
   opacity: .3;*/
-  background-image: url('http://finedininglovers.cdn.crosscast-system.com/BlogPost/xl_12525_trend-2016-cocktails-finedininglovers-tp.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom;
+  /*background-image: url('https://www.walldevil.com/wallpapers/a68/wood-grain-texture-textured-wallpaper-dark-collection-images-textures-wallpapers.jpg');*/
+  /*background-size: cover ;*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: bottom;*/
 }
 /*search box right on index page*/
 .right {
@@ -189,7 +189,7 @@ img {
   border: 1px solid gray;
   box-shadow: 1px 1px 15px rosybrown;
   border-radius: 10px !important;
-  background-image: url('https://pickpocketthief.files.wordpress.com/2014/11/english-leather.jpg')
+  /*background-image: url('https://pickpocketthief.files.wordpress.com/2014/11/english-leather.jpg')*/
 }
 
 ul {
