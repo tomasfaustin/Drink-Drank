@@ -1,7 +1,20 @@
 h1 {
   margin: 20px !important;
+  font-family: 'Oswald', sans-serif;
+  font-variant: small-caps;
 }
 
+h2{
+  font-family: 'Oswald', sans-serif;
+  font-variant: small-caps;
+}
+
+p {
+  font-family: 'Oswald', sans-serif;
+  /*font-variant: normal;*/
+  font-size: 15px;
+  color: white;
+}
 html {
 }
 
@@ -19,6 +32,13 @@ body {
   background-repeat: no-repeat;
   /*flex: 1;*/
   /*min-width: 900px;*/
+}
+
+.splashtext {
+  font-variant: small-caps;
+  font-size: 65px;
+  border-bottom: silver 1px solid;
+  font-family: 'Oswald', sans-serif;
 }
 
 .index-list-title{
@@ -196,6 +216,8 @@ ul {
   /*border: grey 1px solid;*/
   padding: 15px;
   -webkit-overflow-scrolling: touch;
+  border: 1px dashed white;
+  /*background-color: white;*/
 }
 
 /*Dont think this is being used anywere -billie */
@@ -205,10 +227,11 @@ ul {
 }*/
 
 .bar-results-image {
-  border: 1px solid gray !important;
-  width: 100% !important;
-  height: 250px !important;
-  border-radius: 10px !important;
+  /*border: 1px solid gray !important;*/
+  width: 300px !important;
+  height: 200px !important;
+  margin: 0;
+  /*border-radius: 10px !important;*/
 }
 .delete {
   width: 20px;
@@ -244,6 +267,12 @@ a {
   font-size: 15px;
 }
 
+/*.col-md-6 {
+  height: 255px;
+  width: 200px;
+  border: silver 1px solid;*/
+
+}
 
 @media (max-width: 600px) {
   body {
