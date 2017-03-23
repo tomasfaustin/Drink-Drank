@@ -19,12 +19,14 @@ p {
   letter-spacing: 2px;
 }
 
+
+
 html {
 }
 
 body {
-  background: url('http://i.imgur.com/0asnqv3.jpg');
-  /*background-size: 100vh;*/
+  background: url('http://i.imgur.com/rH6UO8u.png');
+  background-size: 1450px;
   /*background-position: center;*/
   /*width: 1000px;*/
   /*height: auto;
@@ -258,6 +260,7 @@ ul {
   margin-top: 2%;
   max-width: 180px;
   max-height: 40px;
+  font-family: 'Oswald', sans-serif;
 }
 .droppable {
   padding-left: 0
@@ -299,7 +302,7 @@ h4 {
 
 @media (max-width: 1600px) {
   body {
-    background: black;
-    background-size: cover;
+    /*background: black;*/
+    /*background-size: cover;*/
   }
 }
