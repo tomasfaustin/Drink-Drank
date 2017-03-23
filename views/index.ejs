@@ -10,8 +10,8 @@
                     <li id="bar-<%= user.bars[i]._id %>" class="index-items draggable">
                         <div class="bar-box">
                             <%= user.bars[i].name %> <br>
-                                <%= user.bars[i].location.address1 %>
-                                <%= user.bars[i].price %>
+                                <%= user.bars[i].address %>
+                                <%= user.bars[i].location %>
                         </div> <button class="delete"> </button></li>
                     <% } %>
                         <% } %>
@@ -26,7 +26,9 @@
                     <li id="bar-<%= user.bars[i]._id %>" class="index-items draggable">
                         <div class="bar-box">
                             <%= user.bars[i].name %> <br>
-                                <%= user.bars[i].location.address1 %>
+                                <%= user.bars[i].address %>
+                                <%= user.bars[i].location %>
+
                         </div> <button class="delete"> </button></li>
                     <% } %>
                         <% } %>
