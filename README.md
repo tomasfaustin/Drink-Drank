@@ -18,9 +18,11 @@ Just remember to drink responsibly. Cheers!
 
 [Link to Google Slides](https://docs.google.com/presentation/d/1uxT85MbGpy_QfKzctI9AatGsZRO34L84ZMVZXQwaQFs/edit?usp=sharing)
 
-## TECH USED
+## TECHNOLOGY USED
 
-* MEN Stack
+* MongoDB
+* Express
+* Node.js
 * AJAX
 * JavaScript
 * JQuery
@@ -29,16 +31,17 @@ Just remember to drink responsibly. Cheers!
 
 ## APPROACH
 
-We created two models--one for Users and one for Bars--that contain all of the information necessary to liaise between users and bars they will frequent. These models manage our users' data and databases.
+We created two models--one for Users and one for Bars--that contain all of the information necessary to liaise between users and bars they will keep in their "Visited" and "Unvisited" lists. These models manage our users' data and databases.
 
 
 ## TRELLO PAGE
 
 [Click here for Trello boards work flow](https://trello.com/b/4enMQKYM/project-3)
 
-## UNSOLVED PROBLEMS
+## UNSOLVED PROBLEMS/STRETCH GOALS
 
-We would like the user to be able to search according to specific search parameters(i.e., price, zip code, etc).
+* add text area field to added bars in order to keep updated notes for each bar
+* create "random" button that offers users a "bar roulette" option for finding new bars
 
 ## INSTALLATION INSTRUCTIONS
 
