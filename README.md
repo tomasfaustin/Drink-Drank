@@ -26,6 +26,7 @@ Just remember to drink responsibly. Cheers!
 * AJAX
 * JavaScript
 * JQuery
+* JQuery UI
 * 3rd Party API
 
 
